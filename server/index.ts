@@ -2,6 +2,8 @@ import * as Koa from 'koa'
 import * as Router from 'koa-router'
 import * as koaStatic from 'koa-static'
 import * as koaBody from 'koa-body'
+import * as views from 'koa-views'
+import * as path from 'path'
 import './utils/loader'
 
 import {InversifyKoaServer } from './inversifyKoa'
@@ -29,6 +31,11 @@ app.use(koaBody({
       // console.log(file);
     },
   },
+}))
+
+// // 配置服务端模板渲染引擎中间件
+app.use(views(path.join(__dirname, './template'), {
+  extension: 'ejs',
 }))
 
 const server = new InversifyKoaServer(container, router, null, app)

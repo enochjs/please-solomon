@@ -6,6 +6,9 @@ const ENV = process.env.NODE_ENV || 'localdev'
 const config = container.get<Config>('Config')
 
 export default async function html (ctx: Context)  {
+  if (ctx.req.url.startsWith('/api')) {
+    return
+  }
   let main = `${config.getServerName()}/main.js`
   if (ENV === 'localdev') {
     main = `http://127.0.0.1:7012/main.js`
