@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "strictNullChecks": false,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "noUnusedParameters": false,
+    "noUnusedLocals": false,
+    "sourceMap": true,
+    "target": "es6",
+    "lib": [
+      "dom",
+      "es7"
+    ]
+  },
+  "include": [
+    "view"
+  ],
+  "exclude": [
+    "node_modules",
+    "es"
+  ]
+}

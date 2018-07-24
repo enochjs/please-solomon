@@ -1,0 +1,33 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+    "target": "es2015",
+		"typeRoots": ["./types"],
+		"moduleResolution": "node",
+		"jsx": "react",
+		"outDir": "./dist",
+		"experimentalDecorators": true,
+		"preserveConstEnums": true,
+		"sourceMap": true,
+		"watch": true,
+		"skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es6", "dom"],
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "isolatedModules": false
+	},
+	"formatCodeOptions": {
+		"indentSize": 2,
+		"tabSize": 2
+	},
+	"include": [
+    "server/**/*.ts"
+	],
+	"exclude": [
+		"index.js",
+		"build",
+		"node_modules"
+	]
+}
