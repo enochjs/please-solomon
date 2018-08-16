@@ -1,6 +1,6 @@
 import Koa from 'koa'
 import { Logger } from 'winston'
-import { Controller, Get, Post, TYPE, Request, ResponseBody, QueryParam, Context } from '../inversifyKoa'
+import { Controller, Get, Post, TYPE, Context, RequestBody } from '../inversifyKoa'
 import { provideNamed, inject } from '../inversifyKoa/ioc'
 import Config from '../config'
 
@@ -22,4 +22,5 @@ export default class LoginController {
       title: 'home page',
     })
   }
+
 }

@@ -9,7 +9,9 @@ import './utils/loader'
 import {InversifyKoaServer } from './inversifyKoa'
 import { container } from './inversifyKoa/ioc'
 import Config from './config/index'
-import html from './utils/html'
+import uuid from './middleware/uuid'
+import accesslogger from './middleware/accesslogger'
+import html from './middleware/html'
 
 const app = new Koa()
 const router = new Router()
@@ -17,7 +19,9 @@ const config = container.get<Config>('Config')
 
 app.use(koaStatic(__dirname + '/static'))
 
-console.log('config.getImagePath()>>>>', config.getImagePath())
+app.use(uuid)
+
+app.use(accesslogger)
 
 app.use(koaBody({
   multipart: true, // 支持文件上传

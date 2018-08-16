@@ -39,6 +39,7 @@
     "react-router-dom": "^4.3.1",
     "redux-zero-x": "^1.1.1",
     "reflect-metadata": "^0.1.12",
+    "uuid": "^3.3.2",
     "winston": "^3.0.0"
   },
   "devDependencies": {
@@ -53,6 +54,7 @@
     "@types/mongodb": "^3.0.20",
     "@types/react-dom": "^16.0.6",
     "@types/react-router-dom": "^4.2.7",
+    "@types/uuid": "^3.4.3",
     "@types/winston": "^2.3.9",
     "awesome-typescript-loader": "^5.1.0",
     "babel-core": "^6.26.3",
