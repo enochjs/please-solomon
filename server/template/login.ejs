@@ -239,6 +239,16 @@
       text-align: center;
       width: 100%;
     }
+    .login-error-msg {
+      color: red;
+      font-size: 12px;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+    }
+    .relative { 
+      position: relative;
+    }
   </style>
 <body>
 
@@ -256,15 +266,16 @@
         <label class="login-icon login-icon login-icon-password" for="login-password"></label>
         <input type="password" name="password" id="login-password" lay-verify="required" placeholder="密码" class="login-input">
       </div>
-      <div class="login-form-item" style="margin-bottom: 20px;">
+      <div class="login-form-item relative" style="margin-bottom: 20px;">
         <label class="checkbox-wrapper"><span class="checkbox">
           <input type="checkbox" class="checkbox-input" value="" onclick="handleCheckbox()">
           <span class="checkbox-inner"></span></span><span class="ml10">记住密码</span>
         </label>
         <a class="login-form-forgot" href="">忘记密码？</a>
+        <div class="login-error-msg" id="error-msg"></div>
       </div>
       <div class="login-form-item">
-        <button class="login-btn login-btn-fluid" lay-submit="" lay-filter="login-submit">登 入</button>
+        <button class="login-btn" onclick="handleLogin()">登 入</button>
       </div>
     </div>
   </div>
@@ -280,5 +291,28 @@
     } else {
       event.target.parentNode.className = 'checkbox'
     }
+  }
+  function handleLogin() {
+    const username = document.querySelector("#login-username").value
+    const password = document.querySelector("#login-password").value
+    fetch('login/check', {
+      body: JSON.stringify({ username, password }), // must match 'Content-Type' header
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, same-origin, *omit
+      headers: {
+        'user-agent': 'Mozilla/4.0 MDN Example',
+        'content-type': 'application/json'
+      },
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, cors, *same-origin
+      redirect: 'follow', // manual, *follow, error
+      referrer: 'no-referrer', // *client, no-referrer
+    })
+    .then(response => response.json()) // parses response to JSON
+    .then(result => {
+      if (result.status === 0) {
+        document.querySelector('#error-msg').innerHTML = result.data
+      }
+    })
   }
 </script>
