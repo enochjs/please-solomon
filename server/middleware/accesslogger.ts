@@ -1,9 +1,5 @@
-import Config from '../config'
 import { container } from '../inversifyKoa/ioc'
 import { Logger } from 'winston'
-
-const ENV = process.env.NODE_ENV || 'localdev'
-const config = container.get<Config>('Config')
 
 export default async function accesslogger (ctx: any, next: () => Promise<any>)  {
   if (!ctx.path.includes('_next') && !ctx.path.includes('static')) {

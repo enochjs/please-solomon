@@ -1,4 +1,4 @@
-import { IMonkManager, id } from 'monk'
+import { IMonkManager } from 'monk'
 import * as md5 from 'md5'
 import { provide, inject } from '../inversifyKoa/ioc'
 import { filterDecorator } from '../utils/decorators'
