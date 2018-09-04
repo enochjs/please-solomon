@@ -37,7 +37,7 @@ app.use(koaBody({
   },
 }))
 
-// // 配置服务端模板渲染引擎中间件
+// 配置服务端模板渲染引擎中间件
 app.use(views(path.join(__dirname, './template'), {
   extension: 'ejs',
 }))

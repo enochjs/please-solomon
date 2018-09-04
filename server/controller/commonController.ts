@@ -1,5 +1,6 @@
 import Koa from 'koa'
 import * as fs from 'fs'
+import * as profiler from 'v8-profiler'
 import { Logger } from 'winston'
 import { Controller, Get, Post, TYPE, Request, ResponseBody, QueryParam, Context } from '../inversifyKoa'
 import { provideNamed, inject } from '../inversifyKoa/ioc'
@@ -57,5 +58,25 @@ export default class CommonController {
     const image = await fs.readFileSync(`${this.config.getImagePath()}${result.url}`)
     ctx.set('Content-Type', result.type)
     ctx.body = image
+  }
+
+  @Get('api/profiler')
+  public async getProfiler () {
+    const duration = 30
+    profiler.startProfiling('profile sample')
+    setTimeout(() => {
+      const profileData = profiler.stopProfiling()
+      console.log(profileData.getHeader())
+      profileData.export((err, result) => {
+        if (err) {
+            console.log(err)
+        } else {
+          fs.writeFileSync('profileData.cpuprofile', result)
+          console.log('Dumping data done')
+        }
+        profileData.delete()
+     })
+    }, duration * 1000)
+    return 'ing'
   }
 }

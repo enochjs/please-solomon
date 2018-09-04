@@ -1,0 +1,882 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg version="1.1" id="flamegraph-svg" 
+  data-width="1200" width="1200" 
+  height="642" data-height="642"
+  onload="init(evt)" 
+  viewBox="0 0 1200 642" 
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<defs>
+	<linearGradient id="background" y1="0" y2="1" x1="0" x2="0">
+    <stop stop-color="#eeeeee" offset="5%" />
+    <stop stop-color="#eeeeb0" offset="95%" />
+	</linearGradient>
+</defs>
+<style type="text/css">
+	.func_g:hover { stroke:black; stroke-width:0.5; }
+</style>
+<script type="text/javascript">
+	var details;
+	function init(evt) { details = document.getElementById("details").firstChild; }
+  function s(info) { details.nodeValue = "Function:: " + info; }
+	function c() { details.nodeValue = ' '; }
+</script>
+
+<rect x="0.0" y="0" id="svg-background" width="1200" height="642" fill="url(#background)"  />
+<!--<text text-anchor="middle" x="600" y="24" font-size="17" font-family="Verdana" fill="rgb(0,0,0)">Flame Graph</text>-->
+<text text-anchor="left" x="10" y="634" font-size="12" font-family="Verdana" fill="rgb(0,0,0)" id="details"> </text>
+
+<g class="func_g " onmouseover="s('send /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-static/node_modules/koa-send/index.js:37 (3 samples), 0%)')" onmouseout="c()" data-search="send /users/wangyongdong/reactnative/please-solomon/node_modules/koa-static/node_modules/koa-send/index.js:37" data-funcname="send /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-static/node_modules/koa-send/index.js:37">
+  <title>send /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-static/node_modules/koa-send/index.js:37 (3 samples), 0%)</title>
+  <rect x="10" data-x="10" y="545" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(232, 173, 29)" rx="2" ry="2"></rect>
+  <text data-x="10" x="10" y="555.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' (4 samples), 0%)')" onmouseout="c()" data-search="" data-funcname="">
+  <title> (4 samples), 0%)</title>
+  <rect x="10" data-x="10" y="561" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(255, 230, 55)" rx="2" ry="2"></rect>
+  <text data-x="10" x="10" y="571.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('_write /Users/wangyongdong/reactNative/please-solomon/node_modules/winston-transport/index.js:68 (4 samples), 0%)')" onmouseout="c()" data-search="_write /users/wangyongdong/reactnative/please-solomon/node_modules/winston-transport/index.js:68" data-funcname="_write /Users/wangyongdong/reactNative/please-solomon/node_modules/winston-transport/index.js:68">
+  <title>_write /Users/wangyongdong/reactNative/please-solomon/node_modules/winston-transport/index.js:68 (4 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="33" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(227, 125, 24)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="43.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('doWrite /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423 (4 samples), 0%)')" onmouseout="c()" data-search="dowrite /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423" data-funcname="doWrite /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423">
+  <title>doWrite /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423 (4 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="49" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(244, 215, 43)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="59.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('writeOrBuffer /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384 (4 samples), 0%)')" onmouseout="c()" data-search="writeorbuffer /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384" data-funcname="writeOrBuffer /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384">
+  <title>writeOrBuffer /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384 (4 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="65" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(248, 109, 48)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="75.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Writable.write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314 (5 samples), 0%)')" onmouseout="c()" data-search="writable.write /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314" data-funcname="Writable.write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314">
+  <title>Writable.write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="81" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(244, 125, 43)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="91.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('ondata /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:616 (5 samples), 0%)')" onmouseout="c()" data-search="ondata /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:616" data-funcname="ondata /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:616">
+  <title>ondata /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:616 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="97" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(238, 209, 37)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="107.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('emitOne events.js:114 (5 samples), 0%)')" onmouseout="c()" data-search="emitone events.js:114" data-funcname="emitOne events.js:114">
+  <title>emitOne events.js:114 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="113" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(245, 143, 44)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="123.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('emit events.js:156 (5 samples), 0%)')" onmouseout="c()" data-search="emit events.js:156" data-funcname="emit events.js:156">
+  <title>emit events.js:156 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="129" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(237, 143, 36)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="139.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('addChunk /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:289 (5 samples), 0%)')" onmouseout="c()" data-search="addchunk /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:289" data-funcname="addChunk /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:289">
+  <title>addChunk /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:289 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="145" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(240, 156, 39)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="155.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('readableAddChunk /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:253 (5 samples), 0%)')" onmouseout="c()" data-search="readableaddchunk /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:253" data-funcname="readableAddChunk /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:253">
+  <title>readableAddChunk /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:253 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="161" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(242, 185, 41)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="171.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Readable.push /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:228 (5 samples), 0%)')" onmouseout="c()" data-search="readable.push /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:228" data-funcname="Readable.push /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:228">
+  <title>Readable.push /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:228 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="177" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(237, 201, 35)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="187.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Transform.push /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:146 (5 samples), 0%)')" onmouseout="c()" data-search="transform.push /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:146" data-funcname="Transform.push /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:146">
+  <title>Transform.push /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:146 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="193" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(239, 175, 37)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="203.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('_transform /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/logger.js:175 (5 samples), 0%)')" onmouseout="c()" data-search="_transform /users/wangyongdong/reactnative/please-solomon/node_modules/winston/lib/winston/logger.js:175" data-funcname="_transform /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/logger.js:175">
+  <title>_transform /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/logger.js:175 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="209" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(249, 140, 48)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="219.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Transform._read /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:179 (5 samples), 0%)')" onmouseout="c()" data-search="transform._read /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:179" data-funcname="Transform._read /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:179">
+  <title>Transform._read /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:179 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="225" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(242, 175, 41)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="235.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Transform._write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:165 (5 samples), 0%)')" onmouseout="c()" data-search="transform._write /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:165" data-funcname="Transform._write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:165">
+  <title>Transform._write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:165 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="241" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(238, 175, 36)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="251.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('doWrite /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423 (5 samples), 0%)')" onmouseout="c()" data-search="dowrite /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423" data-funcname="doWrite /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423">
+  <title>doWrite /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="257" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(244, 215, 43)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="267.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('writeOrBuffer /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384 (5 samples), 0%)')" onmouseout="c()" data-search="writeorbuffer /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384" data-funcname="writeOrBuffer /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384">
+  <title>writeOrBuffer /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="273" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(248, 109, 48)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="283.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Writable.write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314 (5 samples), 0%)')" onmouseout="c()" data-search="writable.write /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314" data-funcname="Writable.write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314">
+  <title>Writable.write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="289" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(244, 125, 43)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="299.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('(anonymous function).args /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/create-logger.js:48 (5 samples), 0%)')" onmouseout="c()" data-search="(anonymous function).args /users/wangyongdong/reactnative/please-solomon/node_modules/winston/lib/winston/create-logger.js:48" data-funcname="(anonymous function).args /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/create-logger.js:48">
+  <title>(anonymous function).args /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/create-logger.js:48 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="305" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(229, 178, 26)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="315.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:15 (5 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/dist/middleware/accesslogger.js:15" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:15">
+  <title> /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:15 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="321" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(237, 196, 36)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="331.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('next (5 samples), 0%)')" onmouseout="c()" data-search="next" data-funcname="next">
+  <title>next (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="337" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(230, 220, 28)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="347.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:3 (5 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/dist/middleware/accesslogger.js:3" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:3">
+  <title> /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:3 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="353" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(245, 196, 44)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="363.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Promise (5 samples), 0%)')" onmouseout="c()" data-search="promise" data-funcname="Promise">
+  <title>Promise (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="369" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(241, 200, 40)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="379.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('__awaiter /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:2 (5 samples), 0%)')" onmouseout="c()" data-search="__awaiter /users/wangyongdong/reactnative/please-solomon/dist/middleware/accesslogger.js:2" data-funcname="__awaiter /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:2">
+  <title>__awaiter /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:2 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="385" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(247, 151, 46)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="395.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('accesslogger /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:14 (5 samples), 0%)')" onmouseout="c()" data-search="accesslogger /users/wangyongdong/reactnative/please-solomon/dist/middleware/accesslogger.js:14" data-funcname="accesslogger /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:14">
+  <title>accesslogger /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:14 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="401" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(239, 164, 37)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="411.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35 (5 samples), 0%)')" onmouseout="c()" data-search="dispatch /users/wangyongdong/reactnative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35" data-funcname="dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35">
+  <title>dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="417" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(235, 177, 33)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="427.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:13 (5 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/dist/middleware/uuid.js:13" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:13">
+  <title> /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:13 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="433" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(241, 196, 39)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="443.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('next (5 samples), 0%)')" onmouseout="c()" data-search="next" data-funcname="next">
+  <title>next (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="449" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(230, 220, 28)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="459.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:3 (5 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/dist/middleware/uuid.js:3" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:3">
+  <title> /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:3 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="465" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(245, 196, 44)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="475.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Promise (5 samples), 0%)')" onmouseout="c()" data-search="promise" data-funcname="Promise">
+  <title>Promise (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="481" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(241, 200, 40)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="491.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('__awaiter /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:2 (5 samples), 0%)')" onmouseout="c()" data-search="__awaiter /users/wangyongdong/reactnative/please-solomon/dist/middleware/uuid.js:2" data-funcname="__awaiter /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:2">
+  <title>__awaiter /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:2 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="497" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(247, 151, 46)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="507.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('uuid /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:12 (5 samples), 0%)')" onmouseout="c()" data-search="uuid /users/wangyongdong/reactnative/please-solomon/dist/middleware/uuid.js:12" data-funcname="uuid /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:12">
+  <title>uuid /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:12 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="513" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(243, 110, 41)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="523.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35 (5 samples), 0%)')" onmouseout="c()" data-search="dispatch /users/wangyongdong/reactnative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35" data-funcname="dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35">
+  <title>dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="529" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(235, 177, 33)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="539.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('serve /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-static/index.js:39 (5 samples), 0%)')" onmouseout="c()" data-search="serve /users/wangyongdong/reactnative/please-solomon/node_modules/koa-static/index.js:39" data-funcname="serve /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-static/index.js:39">
+  <title>serve /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-static/index.js:39 (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="545" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(228, 161, 25)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="555.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' (5 samples), 0%)')" onmouseout="c()" data-search="" data-funcname="">
+  <title> (5 samples), 0%)</title>
+  <rect x="10.3" data-x="10.3" y="561" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(255, 230, 55)" rx="2" ry="2"></rect>
+  <text data-x="10.3" x="10.3" y="571.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:110 (5 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/dist/inversifykoa/server.js:110" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:110">
+  <title> /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:110 (5 samples), 0%)</title>
+  <rect x="11.5" data-x="11.5" y="321" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(235, 196, 33)" rx="2" ry="2"></rect>
+  <text data-x="11.5" x="11.5" y="331.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('next (5 samples), 0%)')" onmouseout="c()" data-search="next" data-funcname="next">
+  <title>next (5 samples), 0%)</title>
+  <rect x="11.5" data-x="11.5" y="337" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(230, 220, 28)" rx="2" ry="2"></rect>
+  <text data-x="11.5" x="11.5" y="347.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:3 (5 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/dist/inversifykoa/server.js:3" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:3">
+  <title> /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:3 (5 samples), 0%)</title>
+  <rect x="11.5" data-x="11.5" y="353" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(245, 196, 44)" rx="2" ry="2"></rect>
+  <text data-x="11.5" x="11.5" y="363.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Promise (5 samples), 0%)')" onmouseout="c()" data-search="promise" data-funcname="Promise">
+  <title>Promise (5 samples), 0%)</title>
+  <rect x="11.5" data-x="11.5" y="369" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(241, 200, 40)" rx="2" ry="2"></rect>
+  <text data-x="11.5" x="11.5" y="379.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('__awaiter /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:2 (5 samples), 0%)')" onmouseout="c()" data-search="__awaiter /users/wangyongdong/reactnative/please-solomon/dist/inversifykoa/server.js:2" data-funcname="__awaiter /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:2">
+  <title>__awaiter /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:2 (5 samples), 0%)</title>
+  <rect x="11.5" data-x="11.5" y="385" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(247, 151, 46)" rx="2" ry="2"></rect>
+  <text data-x="11.5" x="11.5" y="395.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:110 (5 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/dist/inversifykoa/server.js:110" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:110">
+  <title> /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:110 (5 samples), 0%)</title>
+  <rect x="11.5" data-x="11.5" y="401" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(235, 196, 33)" rx="2" ry="2"></rect>
+  <text data-x="11.5" x="11.5" y="411.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-compose/index.js:37 (5 samples), 0%)')" onmouseout="c()" data-search="dispatch /users/wangyongdong/reactnative/please-solomon/node_modules/koa-compose/index.js:37" data-funcname="dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-compose/index.js:37">
+  <title>dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-compose/index.js:37 (5 samples), 0%)</title>
+  <rect x="11.5" data-x="11.5" y="417" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(232, 177, 29)" rx="2" ry="2"></rect>
+  <text data-x="11.5" x="11.5" y="427.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('next /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-compose/index.js:44 (5 samples), 0%)')" onmouseout="c()" data-search="next /users/wangyongdong/reactnative/please-solomon/node_modules/koa-compose/index.js:44" data-funcname="next /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-compose/index.js:44">
+  <title>next /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-compose/index.js:44 (5 samples), 0%)</title>
+  <rect x="11.5" data-x="11.5" y="433" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(236, 220, 34)" rx="2" ry="2"></rect>
+  <text data-x="11.5" x="11.5" y="443.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-router/lib/router.js:342 (5 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/node_modules/koa-router/lib/router.js:342" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-router/lib/router.js:342">
+  <title> /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-router/lib/router.js:342 (5 samples), 0%)</title>
+  <rect x="11.5" data-x="11.5" y="449" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(244, 196, 43)" rx="2" ry="2"></rect>
+  <text data-x="11.5" x="11.5" y="459.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-compose/index.js:37 (5 samples), 0%)')" onmouseout="c()" data-search="dispatch /users/wangyongdong/reactnative/please-solomon/node_modules/koa-compose/index.js:37" data-funcname="dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-compose/index.js:37">
+  <title>dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-compose/index.js:37 (5 samples), 0%)</title>
+  <rect x="11.5" data-x="11.5" y="465" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(232, 177, 29)" rx="2" ry="2"></rect>
+  <text data-x="11.5" x="11.5" y="475.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-compose/index.js:33 (5 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/node_modules/koa-compose/index.js:33" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-compose/index.js:33">
+  <title> /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-compose/index.js:33 (5 samples), 0%)</title>
+  <rect x="11.5" data-x="11.5" y="481" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(239, 196, 37)" rx="2" ry="2"></rect>
+  <text data-x="11.5" x="11.5" y="491.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-router/lib/router.js:317 (5 samples), 0%)')" onmouseout="c()" data-search="dispatch /users/wangyongdong/reactnative/please-solomon/node_modules/koa-router/lib/router.js:317" data-funcname="dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-router/lib/router.js:317">
+  <title>dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-router/lib/router.js:317 (5 samples), 0%)</title>
+  <rect x="11.5" data-x="11.5" y="497" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(239, 177, 37)" rx="2" ry="2"></rect>
+  <text data-x="11.5" x="11.5" y="507.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35 (5 samples), 0%)')" onmouseout="c()" data-search="dispatch /users/wangyongdong/reactnative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35" data-funcname="dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35">
+  <title>dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35 (5 samples), 0%)</title>
+  <rect x="11.5" data-x="11.5" y="513" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(235, 177, 33)" rx="2" ry="2"></rect>
+  <text data-x="11.5" x="11.5" y="523.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('views /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-views/src/index.js:16 (5 samples), 0%)')" onmouseout="c()" data-search="views /users/wangyongdong/reactnative/please-solomon/node_modules/koa-views/src/index.js:16" data-funcname="views /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-views/src/index.js:16">
+  <title>views /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-views/src/index.js:16 (5 samples), 0%)</title>
+  <rect x="11.5" data-x="11.5" y="529" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(236, 120, 34)" rx="2" ry="2"></rect>
+  <text data-x="11.5" x="11.5" y="539.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35 (5 samples), 0%)')" onmouseout="c()" data-search="dispatch /users/wangyongdong/reactnative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35" data-funcname="dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35">
+  <title>dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35 (5 samples), 0%)</title>
+  <rect x="11.5" data-x="11.5" y="545" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(235, 177, 33)" rx="2" ry="2"></rect>
+  <text data-x="11.5" x="11.5" y="555.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-body/index.js:93 (5 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/node_modules/koa-body/index.js:93" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-body/index.js:93">
+  <title> /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-body/index.js:93 (5 samples), 0%)</title>
+  <rect x="11.5" data-x="11.5" y="561" width="0.1999999999999993" data-width="0.1999999999999993" height="15" data-height="15" fill="rgb(244, 196, 43)" rx="2" ry="2"></rect>
+  <text data-x="11.5" x="11.5" y="571.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' (36 samples), 0.2%)')" onmouseout="c()" data-search="" data-funcname="">
+  <title> (36 samples), 0.2%)</title>
+  <rect x="10" data-x="10" y="577" width="1.8000000000000007" data-width="1.8000000000000007" height="15" data-height="15" fill="rgb(255, 230, 55)" rx="2" ry="2"></rect>
+  <text data-x="10" x="10" y="587.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('(garbage collector) (6 samples), 0%)')" onmouseout="c()" data-search="(garbage collector)" data-funcname="(garbage collector)">
+  <title>(garbage collector) (6 samples), 0%)</title>
+  <rect x="11.8" data-x="11.8" y="577" width="0.29999999999999893" data-width="0.29999999999999893" height="15" data-height="15" fill="rgb(247, 207, 46)" rx="2" ry="2"></rect>
+  <text data-x="11.8" x="11.8" y="587.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('(idle) (23,800 samples), 99.4%)')" onmouseout="c()" data-search="(idle)" data-funcname="(idle)">
+  <title>(idle) (23,800 samples), 99.4%)</title>
+  <rect x="12.1" data-x="12.1" y="577" width="1173.1000000000001" data-width="1173.1000000000001" height="15" data-height="15" fill="rgb(251, 187, 51)" rx="2" ry="2"></rect>
+  <text data-x="15.1" x="15.1" y="587.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)">(idle)</text>
+</g>
+<g class="func_g " onmouseover="s('(program) (20 samples), 0.1%)')" onmouseout="c()" data-search="(program)" data-funcname="(program)">
+  <title>(program) (20 samples), 0.1%)</title>
+  <rect x="1185.2" data-x="1185.2" y="577" width="1" data-width="1" height="15" data-height="15" fill="rgb(242, 201, 40)" rx="2" ry="2"></rect>
+  <text data-x="1185.2" x="1185.2" y="587.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('writeOrBuffer _stream_writable.js:349 (3 samples), 0%)')" onmouseout="c()" data-search="writeorbuffer _stream_writable.js:349" data-funcname="writeOrBuffer _stream_writable.js:349">
+  <title>writeOrBuffer _stream_writable.js:349 (3 samples), 0%)</title>
+  <rect x="1186.2" data-x="1186.2" y="433" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(232, 109, 30)" rx="2" ry="2"></rect>
+  <text data-x="1186.2" x="1186.2" y="443.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Writable.write _stream_writable.js:264 (3 samples), 0%)')" onmouseout="c()" data-search="writable.write _stream_writable.js:264" data-funcname="Writable.write _stream_writable.js:264">
+  <title>Writable.write _stream_writable.js:264 (3 samples), 0%)</title>
+  <rect x="1186.2" data-x="1186.2" y="449" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(239, 125, 38)" rx="2" ry="2"></rect>
+  <text data-x="1186.2" x="1186.2" y="459.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Socket.write net.js:712 (3 samples), 0%)')" onmouseout="c()" data-search="socket.write net.js:712" data-funcname="Socket.write net.js:712">
+  <title>Socket.write net.js:712 (3 samples), 0%)</title>
+  <rect x="1186.2" data-x="1186.2" y="465" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(245, 191, 44)" rx="2" ry="2"></rect>
+  <text data-x="1186.2" x="1186.2" y="475.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Connection.write /Users/wangyongdong/reactNative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/connection.js:527 (3 samples), 0%)')" onmouseout="c()" data-search="connection.write /users/wangyongdong/reactnative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/connection.js:527" data-funcname="Connection.write /Users/wangyongdong/reactNative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/connection.js:527">
+  <title>Connection.write /Users/wangyongdong/reactNative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/connection.js:527 (3 samples), 0%)</title>
+  <rect x="1186.2" data-x="1186.2" y="481" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(236, 162, 34)" rx="2" ry="2"></rect>
+  <text data-x="1186.2" x="1186.2" y="491.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/pool.js:1164 (3 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/pool.js:1164" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/pool.js:1164">
+  <title> /Users/wangyongdong/reactNative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/pool.js:1164 (3 samples), 0%)</title>
+  <rect x="1186.2" data-x="1186.2" y="497" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(240, 196, 38)" rx="2" ry="2"></rect>
+  <text data-x="1186.2" x="1186.2" y="507.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('waitForAuth /Users/wangyongdong/reactNative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/pool.js:1155 (3 samples), 0%)')" onmouseout="c()" data-search="waitforauth /users/wangyongdong/reactnative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/pool.js:1155" data-funcname="waitForAuth /Users/wangyongdong/reactNative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/pool.js:1155">
+  <title>waitForAuth /Users/wangyongdong/reactNative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/pool.js:1155 (3 samples), 0%)</title>
+  <rect x="1186.2" data-x="1186.2" y="513" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(239, 84, 38)" rx="2" ry="2"></rect>
+  <text data-x="1186.2" x="1186.2" y="523.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/pool.js:1147 (3 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/pool.js:1147" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/pool.js:1147">
+  <title> /Users/wangyongdong/reactNative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/pool.js:1147 (3 samples), 0%)</title>
+  <rect x="1186.2" data-x="1186.2" y="529" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(237, 196, 35)" rx="2" ry="2"></rect>
+  <text data-x="1186.2" x="1186.2" y="539.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/pool.js:1027 (3 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/pool.js:1027" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/pool.js:1027">
+  <title> /Users/wangyongdong/reactNative/please-solomon/node_modules/monk/node_modules/mongodb-core/lib/connection/pool.js:1027 (3 samples), 0%)</title>
+  <rect x="1186.2" data-x="1186.2" y="545" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(240, 196, 38)" rx="2" ry="2"></rect>
+  <text data-x="1186.2" x="1186.2" y="555.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('emitOne events.js:114 (3 samples), 0%)')" onmouseout="c()" data-search="emitone events.js:114" data-funcname="emitOne events.js:114">
+  <title>emitOne events.js:114 (3 samples), 0%)</title>
+  <rect x="1186.5" data-x="1186.5" y="289" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(245, 143, 44)" rx="2" ry="2"></rect>
+  <text data-x="1186.5" x="1186.5" y="299.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('emit events.js:156 (3 samples), 0%)')" onmouseout="c()" data-search="emit events.js:156" data-funcname="emit events.js:156">
+  <title>emit events.js:156 (3 samples), 0%)</title>
+  <rect x="1186.5" data-x="1186.5" y="305" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(237, 143, 36)" rx="2" ry="2"></rect>
+  <text data-x="1186.5" x="1186.5" y="315.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('addChunk /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:289 (3 samples), 0%)')" onmouseout="c()" data-search="addchunk /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:289" data-funcname="addChunk /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:289">
+  <title>addChunk /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:289 (3 samples), 0%)</title>
+  <rect x="1186.5" data-x="1186.5" y="321" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(240, 156, 39)" rx="2" ry="2"></rect>
+  <text data-x="1186.5" x="1186.5" y="331.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('readableAddChunk /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:253 (3 samples), 0%)')" onmouseout="c()" data-search="readableaddchunk /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:253" data-funcname="readableAddChunk /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:253">
+  <title>readableAddChunk /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:253 (3 samples), 0%)</title>
+  <rect x="1186.5" data-x="1186.5" y="337" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(242, 185, 41)" rx="2" ry="2"></rect>
+  <text data-x="1186.5" x="1186.5" y="347.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Readable.push /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:228 (3 samples), 0%)')" onmouseout="c()" data-search="readable.push /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:228" data-funcname="Readable.push /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:228">
+  <title>Readable.push /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_readable.js:228 (3 samples), 0%)</title>
+  <rect x="1186.5" data-x="1186.5" y="353" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(237, 201, 35)" rx="2" ry="2"></rect>
+  <text data-x="1186.5" x="1186.5" y="363.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Transform.push /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:146 (3 samples), 0%)')" onmouseout="c()" data-search="transform.push /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:146" data-funcname="Transform.push /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:146">
+  <title>Transform.push /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:146 (3 samples), 0%)</title>
+  <rect x="1186.5" data-x="1186.5" y="369" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(239, 175, 37)" rx="2" ry="2"></rect>
+  <text data-x="1186.5" x="1186.5" y="379.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('_transform /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/logger.js:175 (4 samples), 0%)')" onmouseout="c()" data-search="_transform /users/wangyongdong/reactnative/please-solomon/node_modules/winston/lib/winston/logger.js:175" data-funcname="_transform /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/logger.js:175">
+  <title>_transform /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/logger.js:175 (4 samples), 0%)</title>
+  <rect x="1186.5" data-x="1186.5" y="385" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(249, 140, 48)" rx="2" ry="2"></rect>
+  <text data-x="1186.5" x="1186.5" y="395.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Transform._read /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:179 (4 samples), 0%)')" onmouseout="c()" data-search="transform._read /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:179" data-funcname="Transform._read /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:179">
+  <title>Transform._read /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:179 (4 samples), 0%)</title>
+  <rect x="1186.5" data-x="1186.5" y="401" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(242, 175, 41)" rx="2" ry="2"></rect>
+  <text data-x="1186.5" x="1186.5" y="411.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Transform._write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:165 (4 samples), 0%)')" onmouseout="c()" data-search="transform._write /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:165" data-funcname="Transform._write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:165">
+  <title>Transform._write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:165 (4 samples), 0%)</title>
+  <rect x="1186.5" data-x="1186.5" y="417" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(238, 175, 36)" rx="2" ry="2"></rect>
+  <text data-x="1186.5" x="1186.5" y="427.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('doWrite /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423 (4 samples), 0%)')" onmouseout="c()" data-search="dowrite /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423" data-funcname="doWrite /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423">
+  <title>doWrite /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423 (4 samples), 0%)</title>
+  <rect x="1186.5" data-x="1186.5" y="433" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(244, 215, 43)" rx="2" ry="2"></rect>
+  <text data-x="1186.5" x="1186.5" y="443.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('writeOrBuffer /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384 (4 samples), 0%)')" onmouseout="c()" data-search="writeorbuffer /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384" data-funcname="writeOrBuffer /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384">
+  <title>writeOrBuffer /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384 (4 samples), 0%)</title>
+  <rect x="1186.5" data-x="1186.5" y="449" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(248, 109, 48)" rx="2" ry="2"></rect>
+  <text data-x="1186.5" x="1186.5" y="459.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Writable.write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314 (4 samples), 0%)')" onmouseout="c()" data-search="writable.write /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314" data-funcname="Writable.write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314">
+  <title>Writable.write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314 (4 samples), 0%)</title>
+  <rect x="1186.5" data-x="1186.5" y="465" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(244, 125, 43)" rx="2" ry="2"></rect>
+  <text data-x="1186.5" x="1186.5" y="475.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('(anonymous function).args /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/create-logger.js:48 (4 samples), 0%)')" onmouseout="c()" data-search="(anonymous function).args /users/wangyongdong/reactnative/please-solomon/node_modules/winston/lib/winston/create-logger.js:48" data-funcname="(anonymous function).args /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/create-logger.js:48">
+  <title>(anonymous function).args /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/create-logger.js:48 (4 samples), 0%)</title>
+  <rect x="1186.5" data-x="1186.5" y="481" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(229, 178, 26)" rx="2" ry="2"></rect>
+  <text data-x="1186.5" x="1186.5" y="491.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('ctx.res.on /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:20 (5 samples), 0%)')" onmouseout="c()" data-search="ctx.res.on /users/wangyongdong/reactnative/please-solomon/dist/middleware/accesslogger.js:20" data-funcname="ctx.res.on /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:20">
+  <title>ctx.res.on /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:20 (5 samples), 0%)</title>
+  <rect x="1186.4" data-x="1186.4" y="497" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(228, 128, 25)" rx="2" ry="2"></rect>
+  <text data-x="1186.4" x="1186.4" y="507.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('emitNone events.js:104 (6 samples), 0%)')" onmouseout="c()" data-search="emitnone events.js:104" data-funcname="emitNone events.js:104">
+  <title>emitNone events.js:104 (6 samples), 0%)</title>
+  <rect x="1186.4" data-x="1186.4" y="513" width="0.2999999999999545" data-width="0.2999999999999545" height="15" data-height="15" fill="rgb(246, 143, 46)" rx="2" ry="2"></rect>
+  <text data-x="1186.4" x="1186.4" y="523.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('emit events.js:156 (6 samples), 0%)')" onmouseout="c()" data-search="emit events.js:156" data-funcname="emit events.js:156">
+  <title>emit events.js:156 (6 samples), 0%)</title>
+  <rect x="1186.4" data-x="1186.4" y="529" width="0.2999999999999545" data-width="0.2999999999999545" height="15" data-height="15" fill="rgb(237, 143, 36)" rx="2" ry="2"></rect>
+  <text data-x="1186.4" x="1186.4" y="539.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('onFinish _http_outgoing.js:719 (6 samples), 0%)')" onmouseout="c()" data-search="onfinish _http_outgoing.js:719" data-funcname="onFinish _http_outgoing.js:719">
+  <title>onFinish _http_outgoing.js:719 (6 samples), 0%)</title>
+  <rect x="1186.4" data-x="1186.4" y="545" width="0.2999999999999545" data-width="0.2999999999999545" height="15" data-height="15" fill="rgb(232, 190, 30)" rx="2" ry="2"></rect>
+  <text data-x="1186.4" x="1186.4" y="555.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('resume_ _stream_readable.js:819 (3 samples), 0%)')" onmouseout="c()" data-search="resume_ _stream_readable.js:819" data-funcname="resume_ _stream_readable.js:819">
+  <title>resume_ _stream_readable.js:819 (3 samples), 0%)</title>
+  <rect x="1186.7" data-x="1186.7" y="545" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(232, 165, 29)" rx="2" ry="2"></rect>
+  <text data-x="1186.7" x="1186.7" y="555.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('_combinedTickCallback internal/process/next_tick.js:129 (14 samples), 0.1%)')" onmouseout="c()" data-search="_combinedtickcallback internal/process/next_tick.js:129" data-funcname="_combinedTickCallback internal/process/next_tick.js:129">
+  <title>_combinedTickCallback internal/process/next_tick.js:129 (14 samples), 0.1%)</title>
+  <rect x="1186.2" data-x="1186.2" y="561" width="0.599999999999909" data-width="0.599999999999909" height="15" data-height="15" fill="rgb(236, 180, 34)" rx="2" ry="2"></rect>
+  <text data-x="1186.2" x="1186.2" y="571.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('createScript vm.js:79 (4 samples), 0%)')" onmouseout="c()" data-search="createscript vm.js:79" data-funcname="createScript vm.js:79">
+  <title>createScript vm.js:79 (4 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="145" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(236, 122, 34)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="155.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('runInThisContext vm.js:138 (4 samples), 0%)')" onmouseout="c()" data-search="runinthiscontext vm.js:138" data-funcname="runInThisContext vm.js:138">
+  <title>runInThisContext vm.js:138 (4 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="161" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(236, 156, 34)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="171.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Module._compile module.js:609 (5 samples), 0%)')" onmouseout="c()" data-search="module._compile module.js:609" data-funcname="Module._compile module.js:609">
+  <title>Module._compile module.js:609 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="177" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(234, 156, 32)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="187.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Module._extensions..js module.js:661 (5 samples), 0%)')" onmouseout="c()" data-search="module._extensions..js module.js:661" data-funcname="Module._extensions..js module.js:661">
+  <title>Module._extensions..js module.js:661 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="193" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(224, 156, 21)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="203.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Module.load module.js:556 (5 samples), 0%)')" onmouseout="c()" data-search="module.load module.js:556" data-funcname="Module.load module.js:556">
+  <title>Module.load module.js:556 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="209" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(235, 156, 33)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="219.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('tryModuleLoad module.js:502 (5 samples), 0%)')" onmouseout="c()" data-search="trymoduleload module.js:502" data-funcname="tryModuleLoad module.js:502">
+  <title>tryModuleLoad module.js:502 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="225" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(247, 159, 46)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="235.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Module._load module.js:448 (5 samples), 0%)')" onmouseout="c()" data-search="module._load module.js:448" data-funcname="Module._load module.js:448">
+  <title>Module._load module.js:448 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="241" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(233, 156, 31)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="251.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Module.require module.js:593 (5 samples), 0%)')" onmouseout="c()" data-search="module.require module.js:593" data-funcname="Module.require module.js:593">
+  <title>Module.require module.js:593 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="257" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(248, 156, 47)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="267.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('require internal/module.js:8 (5 samples), 0%)')" onmouseout="c()" data-search="require internal/module.js:8" data-funcname="require internal/module.js:8">
+  <title>require internal/module.js:8 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="273" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(236, 172, 35)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="283.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/node_modules/iconv-lite/encodings/index.js:1 (5 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/node_modules/iconv-lite/encodings/index.js:1" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/node_modules/iconv-lite/encodings/index.js:1">
+  <title> /Users/wangyongdong/reactNative/please-solomon/node_modules/iconv-lite/encodings/index.js:1 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="289" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(231, 196, 29)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="299.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Module._compile module.js:609 (5 samples), 0%)')" onmouseout="c()" data-search="module._compile module.js:609" data-funcname="Module._compile module.js:609">
+  <title>Module._compile module.js:609 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="305" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(234, 156, 32)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="315.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Module._extensions..js module.js:661 (5 samples), 0%)')" onmouseout="c()" data-search="module._extensions..js module.js:661" data-funcname="Module._extensions..js module.js:661">
+  <title>Module._extensions..js module.js:661 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="321" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(224, 156, 21)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="331.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Module.load module.js:556 (5 samples), 0%)')" onmouseout="c()" data-search="module.load module.js:556" data-funcname="Module.load module.js:556">
+  <title>Module.load module.js:556 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="337" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(235, 156, 33)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="347.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('tryModuleLoad module.js:502 (5 samples), 0%)')" onmouseout="c()" data-search="trymoduleload module.js:502" data-funcname="tryModuleLoad module.js:502">
+  <title>tryModuleLoad module.js:502 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="353" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(247, 159, 46)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="363.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Module._load module.js:448 (5 samples), 0%)')" onmouseout="c()" data-search="module._load module.js:448" data-funcname="Module._load module.js:448">
+  <title>Module._load module.js:448 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="369" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(233, 156, 31)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="379.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Module.require module.js:593 (5 samples), 0%)')" onmouseout="c()" data-search="module.require module.js:593" data-funcname="Module.require module.js:593">
+  <title>Module.require module.js:593 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="385" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(248, 156, 47)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="395.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('require internal/module.js:8 (5 samples), 0%)')" onmouseout="c()" data-search="require internal/module.js:8" data-funcname="require internal/module.js:8">
+  <title>require internal/module.js:8 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="401" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(236, 172, 35)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="411.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('getCodec /Users/wangyongdong/reactNative/please-solomon/node_modules/iconv-lite/lib/index.js:63 (5 samples), 0%)')" onmouseout="c()" data-search="getcodec /users/wangyongdong/reactnative/please-solomon/node_modules/iconv-lite/lib/index.js:63" data-funcname="getCodec /Users/wangyongdong/reactNative/please-solomon/node_modules/iconv-lite/lib/index.js:63">
+  <title>getCodec /Users/wangyongdong/reactNative/please-solomon/node_modules/iconv-lite/lib/index.js:63 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="417" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(235, 170, 33)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="427.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('getDecoder /Users/wangyongdong/reactNative/please-solomon/node_modules/iconv-lite/lib/index.js:126 (5 samples), 0%)')" onmouseout="c()" data-search="getdecoder /users/wangyongdong/reactnative/please-solomon/node_modules/iconv-lite/lib/index.js:126" data-funcname="getDecoder /Users/wangyongdong/reactNative/please-solomon/node_modules/iconv-lite/lib/index.js:126">
+  <title>getDecoder /Users/wangyongdong/reactNative/please-solomon/node_modules/iconv-lite/lib/index.js:126 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="433" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(241, 170, 39)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="443.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('getDecoder /Users/wangyongdong/reactNative/please-solomon/node_modules/raw-body/index.js:41 (5 samples), 0%)')" onmouseout="c()" data-search="getdecoder /users/wangyongdong/reactnative/please-solomon/node_modules/raw-body/index.js:41" data-funcname="getDecoder /Users/wangyongdong/reactNative/please-solomon/node_modules/raw-body/index.js:41">
+  <title>getDecoder /Users/wangyongdong/reactNative/please-solomon/node_modules/raw-body/index.js:41 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="449" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(224, 170, 20)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="459.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('readStream /Users/wangyongdong/reactNative/please-solomon/node_modules/raw-body/index.js:147 (5 samples), 0%)')" onmouseout="c()" data-search="readstream /users/wangyongdong/reactnative/please-solomon/node_modules/raw-body/index.js:147" data-funcname="readStream /Users/wangyongdong/reactNative/please-solomon/node_modules/raw-body/index.js:147">
+  <title>readStream /Users/wangyongdong/reactNative/please-solomon/node_modules/raw-body/index.js:147 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="465" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(237, 185, 35)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="475.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('executor /Users/wangyongdong/reactNative/please-solomon/node_modules/raw-body/index.js:111 (5 samples), 0%)')" onmouseout="c()" data-search="executor /users/wangyongdong/reactnative/please-solomon/node_modules/raw-body/index.js:111" data-funcname="executor /Users/wangyongdong/reactNative/please-solomon/node_modules/raw-body/index.js:111">
+  <title>executor /Users/wangyongdong/reactNative/please-solomon/node_modules/raw-body/index.js:111 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="481" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(233, 155, 31)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="491.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Promise (5 samples), 0%)')" onmouseout="c()" data-search="promise" data-funcname="Promise">
+  <title>Promise (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="497" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(241, 200, 40)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="507.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('getRawBody /Users/wangyongdong/reactNative/please-solomon/node_modules/raw-body/index.js:67 (5 samples), 0%)')" onmouseout="c()" data-search="getrawbody /users/wangyongdong/reactnative/please-solomon/node_modules/raw-body/index.js:67" data-funcname="getRawBody /Users/wangyongdong/reactNative/please-solomon/node_modules/raw-body/index.js:67">
+  <title>getRawBody /Users/wangyongdong/reactNative/please-solomon/node_modules/raw-body/index.js:67 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="513" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(228, 170, 26)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="523.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/node_modules/co-body/lib/form.js:41 (5 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/node_modules/co-body/lib/form.js:41" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/node_modules/co-body/lib/form.js:41">
+  <title> /Users/wangyongdong/reactNative/please-solomon/node_modules/co-body/lib/form.js:41 (5 samples), 0%)</title>
+  <rect x="1187" data-x="1187" y="529" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(224, 196, 20)" rx="2" ry="2"></rect>
+  <text data-x="1187" x="1187" y="539.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('respond /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/lib/application.js:204 (3 samples), 0%)')" onmouseout="c()" data-search="respond /users/wangyongdong/reactnative/please-solomon/node_modules/koa/lib/application.js:204" data-funcname="respond /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/lib/application.js:204">
+  <title>respond /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/lib/application.js:204 (3 samples), 0%)</title>
+  <rect x="1187.3" data-x="1187.3" y="513" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(246, 165, 45)" rx="2" ry="2"></rect>
+  <text data-x="1187.3" x="1187.3" y="523.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('handleResponse /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/lib/application.js:148 (3 samples), 0%)')" onmouseout="c()" data-search="handleresponse /users/wangyongdong/reactnative/please-solomon/node_modules/koa/lib/application.js:148" data-funcname="handleResponse /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/lib/application.js:148">
+  <title>handleResponse /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/lib/application.js:148 (3 samples), 0%)</title>
+  <rect x="1187.3" data-x="1187.3" y="529" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(235, 146, 33)" rx="2" ry="2"></rect>
+  <text data-x="1187.3" x="1187.3" y="539.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/node_modules/delegates/index.js:91 (4 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/node_modules/delegates/index.js:91" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/node_modules/delegates/index.js:91">
+  <title> /Users/wangyongdong/reactNative/please-solomon/node_modules/delegates/index.js:91 (4 samples), 0%)</title>
+  <rect x="1187.5" data-x="1187.5" y="465" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(230, 196, 28)" rx="2" ry="2"></rect>
+  <text data-x="1187.5" x="1187.5" y="475.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('exports.ResponseBody.After /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/decorators.js:109 (4 samples), 0%)')" onmouseout="c()" data-search="exports.responsebody.after /users/wangyongdong/reactnative/please-solomon/dist/inversifykoa/decorators.js:109" data-funcname="exports.ResponseBody.After /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/decorators.js:109">
+  <title>exports.ResponseBody.After /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/decorators.js:109 (4 samples), 0%)</title>
+  <rect x="1187.5" data-x="1187.5" y="481" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(238, 159, 36)" rx="2" ry="2"></rect>
+  <text data-x="1187.5" x="1187.5" y="491.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:110 (4 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/dist/inversifykoa/server.js:110" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:110">
+  <title> /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:110 (4 samples), 0%)</title>
+  <rect x="1187.5" data-x="1187.5" y="497" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(235, 196, 33)" rx="2" ry="2"></rect>
+  <text data-x="1187.5" x="1187.5" y="507.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('next (4 samples), 0%)')" onmouseout="c()" data-search="next" data-funcname="next">
+  <title>next (4 samples), 0%)</title>
+  <rect x="1187.5" data-x="1187.5" y="513" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(230, 220, 28)" rx="2" ry="2"></rect>
+  <text data-x="1187.5" x="1187.5" y="523.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('fulfilled /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:4 (4 samples), 0%)')" onmouseout="c()" data-search="fulfilled /users/wangyongdong/reactnative/please-solomon/dist/inversifykoa/server.js:4" data-funcname="fulfilled /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:4">
+  <title>fulfilled /Users/wangyongdong/reactNative/please-solomon/dist/inversifyKoa/server.js:4 (4 samples), 0%)</title>
+  <rect x="1187.5" data-x="1187.5" y="529" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(243, 179, 42)" rx="2" ry="2"></rect>
+  <text data-x="1187.5" x="1187.5" y="539.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('_transform /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/logger.js:175 (3 samples), 0%)')" onmouseout="c()" data-search="_transform /users/wangyongdong/reactnative/please-solomon/node_modules/winston/lib/winston/logger.js:175" data-funcname="_transform /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/logger.js:175">
+  <title>_transform /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/logger.js:175 (3 samples), 0%)</title>
+  <rect x="1187.9" data-x="1187.9" y="385" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(249, 140, 48)" rx="2" ry="2"></rect>
+  <text data-x="1187.9" x="1187.9" y="395.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Transform._read /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:179 (3 samples), 0%)')" onmouseout="c()" data-search="transform._read /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:179" data-funcname="Transform._read /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:179">
+  <title>Transform._read /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:179 (3 samples), 0%)</title>
+  <rect x="1187.9" data-x="1187.9" y="401" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(242, 175, 41)" rx="2" ry="2"></rect>
+  <text data-x="1187.9" x="1187.9" y="411.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Transform._write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:165 (3 samples), 0%)')" onmouseout="c()" data-search="transform._write /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:165" data-funcname="Transform._write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:165">
+  <title>Transform._write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:165 (3 samples), 0%)</title>
+  <rect x="1187.9" data-x="1187.9" y="417" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(238, 175, 36)" rx="2" ry="2"></rect>
+  <text data-x="1187.9" x="1187.9" y="427.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('doWrite /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423 (3 samples), 0%)')" onmouseout="c()" data-search="dowrite /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423" data-funcname="doWrite /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423">
+  <title>doWrite /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423 (3 samples), 0%)</title>
+  <rect x="1187.9" data-x="1187.9" y="433" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(244, 215, 43)" rx="2" ry="2"></rect>
+  <text data-x="1187.9" x="1187.9" y="443.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('writeOrBuffer /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384 (3 samples), 0%)')" onmouseout="c()" data-search="writeorbuffer /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384" data-funcname="writeOrBuffer /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384">
+  <title>writeOrBuffer /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384 (3 samples), 0%)</title>
+  <rect x="1187.9" data-x="1187.9" y="449" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(248, 109, 48)" rx="2" ry="2"></rect>
+  <text data-x="1187.9" x="1187.9" y="459.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Writable.write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314 (3 samples), 0%)')" onmouseout="c()" data-search="writable.write /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314" data-funcname="Writable.write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314">
+  <title>Writable.write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314 (3 samples), 0%)</title>
+  <rect x="1187.9" data-x="1187.9" y="465" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(244, 125, 43)" rx="2" ry="2"></rect>
+  <text data-x="1187.9" x="1187.9" y="475.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('(anonymous function).args /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/create-logger.js:48 (3 samples), 0%)')" onmouseout="c()" data-search="(anonymous function).args /users/wangyongdong/reactnative/please-solomon/node_modules/winston/lib/winston/create-logger.js:48" data-funcname="(anonymous function).args /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/create-logger.js:48">
+  <title>(anonymous function).args /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/create-logger.js:48 (3 samples), 0%)</title>
+  <rect x="1187.9" data-x="1187.9" y="481" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(229, 178, 26)" rx="2" ry="2"></rect>
+  <text data-x="1187.9" x="1187.9" y="491.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/dist/controller/userController.js:28 (3 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/dist/controller/usercontroller.js:28" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/dist/controller/userController.js:28">
+  <title> /Users/wangyongdong/reactNative/please-solomon/dist/controller/userController.js:28 (3 samples), 0%)</title>
+  <rect x="1187.9" data-x="1187.9" y="497" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(231, 196, 29)" rx="2" ry="2"></rect>
+  <text data-x="1187.9" x="1187.9" y="507.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('next (3 samples), 0%)')" onmouseout="c()" data-search="next" data-funcname="next">
+  <title>next (3 samples), 0%)</title>
+  <rect x="1187.9" data-x="1187.9" y="513" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(230, 220, 28)" rx="2" ry="2"></rect>
+  <text data-x="1187.9" x="1187.9" y="523.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('fulfilled /Users/wangyongdong/reactNative/please-solomon/dist/controller/userController.js:16 (3 samples), 0%)')" onmouseout="c()" data-search="fulfilled /users/wangyongdong/reactnative/please-solomon/dist/controller/usercontroller.js:16" data-funcname="fulfilled /Users/wangyongdong/reactNative/please-solomon/dist/controller/userController.js:16">
+  <title>fulfilled /Users/wangyongdong/reactNative/please-solomon/dist/controller/userController.js:16 (3 samples), 0%)</title>
+  <rect x="1187.9" data-x="1187.9" y="529" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(236, 179, 34)" rx="2" ry="2"></rect>
+  <text data-x="1187.9" x="1187.9" y="539.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('_transform /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/logger.js:175 (3 samples), 0%)')" onmouseout="c()" data-search="_transform /users/wangyongdong/reactnative/please-solomon/node_modules/winston/lib/winston/logger.js:175" data-funcname="_transform /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/logger.js:175">
+  <title>_transform /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/logger.js:175 (3 samples), 0%)</title>
+  <rect x="1188.4" data-x="1188.4" y="385" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(249, 140, 48)" rx="2" ry="2"></rect>
+  <text data-x="1188.4" x="1188.4" y="395.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Transform._read /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:179 (3 samples), 0%)')" onmouseout="c()" data-search="transform._read /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:179" data-funcname="Transform._read /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:179">
+  <title>Transform._read /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:179 (3 samples), 0%)</title>
+  <rect x="1188.4" data-x="1188.4" y="401" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(242, 175, 41)" rx="2" ry="2"></rect>
+  <text data-x="1188.4" x="1188.4" y="411.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Transform._write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:165 (3 samples), 0%)')" onmouseout="c()" data-search="transform._write /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:165" data-funcname="Transform._write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:165">
+  <title>Transform._write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_transform.js:165 (3 samples), 0%)</title>
+  <rect x="1188.4" data-x="1188.4" y="417" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(238, 175, 36)" rx="2" ry="2"></rect>
+  <text data-x="1188.4" x="1188.4" y="427.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('doWrite /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423 (3 samples), 0%)')" onmouseout="c()" data-search="dowrite /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423" data-funcname="doWrite /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423">
+  <title>doWrite /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:423 (3 samples), 0%)</title>
+  <rect x="1188.4" data-x="1188.4" y="433" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(244, 215, 43)" rx="2" ry="2"></rect>
+  <text data-x="1188.4" x="1188.4" y="443.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('writeOrBuffer /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384 (3 samples), 0%)')" onmouseout="c()" data-search="writeorbuffer /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384" data-funcname="writeOrBuffer /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384">
+  <title>writeOrBuffer /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:384 (3 samples), 0%)</title>
+  <rect x="1188.4" data-x="1188.4" y="449" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(248, 109, 48)" rx="2" ry="2"></rect>
+  <text data-x="1188.4" x="1188.4" y="459.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Writable.write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314 (3 samples), 0%)')" onmouseout="c()" data-search="writable.write /users/wangyongdong/reactnative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314" data-funcname="Writable.write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314">
+  <title>Writable.write /Users/wangyongdong/reactNative/please-solomon/node_modules/readable-stream/lib/_stream_writable.js:314 (3 samples), 0%)</title>
+  <rect x="1188.4" data-x="1188.4" y="465" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(244, 125, 43)" rx="2" ry="2"></rect>
+  <text data-x="1188.4" x="1188.4" y="475.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('(anonymous function).args /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/create-logger.js:48 (3 samples), 0%)')" onmouseout="c()" data-search="(anonymous function).args /users/wangyongdong/reactnative/please-solomon/node_modules/winston/lib/winston/create-logger.js:48" data-funcname="(anonymous function).args /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/create-logger.js:48">
+  <title>(anonymous function).args /Users/wangyongdong/reactNative/please-solomon/node_modules/winston/lib/winston/create-logger.js:48 (3 samples), 0%)</title>
+  <rect x="1188.4" data-x="1188.4" y="481" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(229, 178, 26)" rx="2" ry="2"></rect>
+  <text data-x="1188.4" x="1188.4" y="491.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/dist/controller/userController.js:28 (3 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/dist/controller/usercontroller.js:28" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/dist/controller/userController.js:28">
+  <title> /Users/wangyongdong/reactNative/please-solomon/dist/controller/userController.js:28 (3 samples), 0%)</title>
+  <rect x="1188.4" data-x="1188.4" y="497" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(231, 196, 29)" rx="2" ry="2"></rect>
+  <text data-x="1188.4" x="1188.4" y="507.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('next (3 samples), 0%)')" onmouseout="c()" data-search="next" data-funcname="next">
+  <title>next (3 samples), 0%)</title>
+  <rect x="1188.4" data-x="1188.4" y="513" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(230, 220, 28)" rx="2" ry="2"></rect>
+  <text data-x="1188.4" x="1188.4" y="523.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('fulfilled /Users/wangyongdong/reactNative/please-solomon/dist/controller/userController.js:16 (3 samples), 0%)')" onmouseout="c()" data-search="fulfilled /users/wangyongdong/reactnative/please-solomon/dist/controller/usercontroller.js:16" data-funcname="fulfilled /Users/wangyongdong/reactNative/please-solomon/dist/controller/userController.js:16">
+  <title>fulfilled /Users/wangyongdong/reactNative/please-solomon/dist/controller/userController.js:16 (3 samples), 0%)</title>
+  <rect x="1188.4" data-x="1188.4" y="529" width="0.09999999999990905" data-width="0.09999999999990905" height="15" data-height="15" fill="rgb(236, 179, 34)" rx="2" ry="2"></rect>
+  <text data-x="1188.4" x="1188.4" y="539.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' (35 samples), 0.1%)')" onmouseout="c()" data-search="" data-funcname="">
+  <title> (35 samples), 0.1%)</title>
+  <rect x="1186.9" data-x="1186.9" y="545" width="1.699999999999818" data-width="1.699999999999818" height="15" data-height="15" fill="rgb(255, 230, 55)" rx="2" ry="2"></rect>
+  <text data-x="1186.9" x="1186.9" y="555.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('runMicrotasks (35 samples), 0.1%)')" onmouseout="c()" data-search="runmicrotasks" data-funcname="runMicrotasks">
+  <title>runMicrotasks (35 samples), 0.1%)</title>
+  <rect x="1186.9" data-x="1186.9" y="561" width="1.699999999999818" data-width="1.699999999999818" height="15" data-height="15" fill="rgb(233, 156, 30)" rx="2" ry="2"></rect>
+  <text data-x="1186.9" x="1186.9" y="571.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('_tickCallback internal/process/next_tick.js:151 (50 samples), 0.2%)')" onmouseout="c()" data-search="_tickcallback internal/process/next_tick.js:151" data-funcname="_tickCallback internal/process/next_tick.js:151">
+  <title>_tickCallback internal/process/next_tick.js:151 (50 samples), 0.2%)</title>
+  <rect x="1186.2" data-x="1186.2" y="577" width="2.3999999999998636" data-width="2.3999999999998636" height="15" data-height="15" fill="rgb(229, 131, 26)" rx="2" ry="2"></rect>
+  <text data-x="1186.2" x="1186.2" y="587.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('listOnTimeout timers.js:218 (3 samples), 0%)')" onmouseout="c()" data-search="listontimeout timers.js:218" data-funcname="listOnTimeout timers.js:218">
+  <title>listOnTimeout timers.js:218 (3 samples), 0%)</title>
+  <rect x="1188.6" data-x="1188.6" y="577" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(238, 113, 36)" rx="2" ry="2"></rect>
+  <text data-x="1188.6" x="1188.6" y="587.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Socket net.js:185 (4 samples), 0%)')" onmouseout="c()" data-search="socket net.js:185" data-funcname="Socket net.js:185">
+  <title>Socket net.js:185 (4 samples), 0%)</title>
+  <rect x="1188.9" data-x="1188.9" y="561" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(248, 191, 47)" rx="2" ry="2"></rect>
+  <text data-x="1188.9" x="1188.9" y="571.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('onconnection net.js:1546 (6 samples), 0%)')" onmouseout="c()" data-search="onconnection net.js:1546" data-funcname="onconnection net.js:1546">
+  <title>onconnection net.js:1546 (6 samples), 0%)</title>
+  <rect x="1188.8" data-x="1188.8" y="577" width="0.2999999999999545" data-width="0.2999999999999545" height="15" data-height="15" fill="rgb(236, 212, 34)" rx="2" ry="2"></rect>
+  <text data-x="1188.8" x="1188.8" y="587.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('addChunk _stream_readable.js:261 (3 samples), 0%)')" onmouseout="c()" data-search="addchunk _stream_readable.js:261" data-funcname="addChunk _stream_readable.js:261">
+  <title>addChunk _stream_readable.js:261 (3 samples), 0%)</title>
+  <rect x="1189.1" data-x="1189.1" y="529" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(227, 156, 24)" rx="2" ry="2"></rect>
+  <text data-x="1189.1" x="1189.1" y="539.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('readableAddChunk _stream_readable.js:216 (3 samples), 0%)')" onmouseout="c()" data-search="readableaddchunk _stream_readable.js:216" data-funcname="readableAddChunk _stream_readable.js:216">
+  <title>readableAddChunk _stream_readable.js:216 (3 samples), 0%)</title>
+  <rect x="1189.1" data-x="1189.1" y="545" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(241, 185, 40)" rx="2" ry="2"></rect>
+  <text data-x="1189.1" x="1189.1" y="555.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Readable.push _stream_readable.js:191 (3 samples), 0%)')" onmouseout="c()" data-search="readable.push _stream_readable.js:191" data-funcname="Readable.push _stream_readable.js:191">
+  <title>Readable.push _stream_readable.js:191 (3 samples), 0%)</title>
+  <rect x="1189.1" data-x="1189.1" y="561" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(236, 201, 35)" rx="2" ry="2"></rect>
+  <text data-x="1189.1" x="1189.1" y="571.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('onread net.js:589 (3 samples), 0%)')" onmouseout="c()" data-search="onread net.js:589" data-funcname="onread net.js:589">
+  <title>onread net.js:589 (3 samples), 0%)</title>
+  <rect x="1189.1" data-x="1189.1" y="577" width="0.20000000000004547" data-width="0.20000000000004547" height="15" data-height="15" fill="rgb(238, 203, 37)" rx="2" ry="2"></rect>
+  <text data-x="1189.1" x="1189.1" y="587.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:15 (4 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/dist/middleware/accesslogger.js:15" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:15">
+  <title> /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:15 (4 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="225" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(237, 196, 36)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="235.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('next (4 samples), 0%)')" onmouseout="c()" data-search="next" data-funcname="next">
+  <title>next (4 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="241" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(230, 220, 28)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="251.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:3 (4 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/dist/middleware/accesslogger.js:3" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:3">
+  <title> /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:3 (4 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="257" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(245, 196, 44)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="267.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Promise (4 samples), 0%)')" onmouseout="c()" data-search="promise" data-funcname="Promise">
+  <title>Promise (4 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="273" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(241, 200, 40)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="283.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('__awaiter /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:2 (4 samples), 0%)')" onmouseout="c()" data-search="__awaiter /users/wangyongdong/reactnative/please-solomon/dist/middleware/accesslogger.js:2" data-funcname="__awaiter /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:2">
+  <title>__awaiter /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:2 (4 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="289" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(247, 151, 46)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="299.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('accesslogger /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:14 (4 samples), 0%)')" onmouseout="c()" data-search="accesslogger /users/wangyongdong/reactnative/please-solomon/dist/middleware/accesslogger.js:14" data-funcname="accesslogger /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:14">
+  <title>accesslogger /Users/wangyongdong/reactNative/please-solomon/dist/middleware/accesslogger.js:14 (4 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="305" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(239, 164, 37)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="315.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35 (4 samples), 0%)')" onmouseout="c()" data-search="dispatch /users/wangyongdong/reactnative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35" data-funcname="dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35">
+  <title>dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35 (4 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="321" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(235, 177, 33)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="331.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:13 (4 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/dist/middleware/uuid.js:13" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:13">
+  <title> /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:13 (4 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="337" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(241, 196, 39)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="347.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('next (4 samples), 0%)')" onmouseout="c()" data-search="next" data-funcname="next">
+  <title>next (4 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="353" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(230, 220, 28)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="363.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:3 (4 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/dist/middleware/uuid.js:3" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:3">
+  <title> /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:3 (4 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="369" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(245, 196, 44)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="379.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('Promise (4 samples), 0%)')" onmouseout="c()" data-search="promise" data-funcname="Promise">
+  <title>Promise (4 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="385" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(241, 200, 40)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="395.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('__awaiter /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:2 (4 samples), 0%)')" onmouseout="c()" data-search="__awaiter /users/wangyongdong/reactnative/please-solomon/dist/middleware/uuid.js:2" data-funcname="__awaiter /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:2">
+  <title>__awaiter /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:2 (4 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="401" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(247, 151, 46)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="411.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('uuid /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:12 (4 samples), 0%)')" onmouseout="c()" data-search="uuid /users/wangyongdong/reactnative/please-solomon/dist/middleware/uuid.js:12" data-funcname="uuid /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:12">
+  <title>uuid /Users/wangyongdong/reactNative/please-solomon/dist/middleware/uuid.js:12 (4 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="417" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(243, 110, 41)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="427.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35 (4 samples), 0%)')" onmouseout="c()" data-search="dispatch /users/wangyongdong/reactnative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35" data-funcname="dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35">
+  <title>dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35 (4 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="433" width="0.1999999999998181" data-width="0.1999999999998181" height="15" data-height="15" fill="rgb(235, 177, 33)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="443.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('send /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-static/node_modules/koa-send/index.js:37 (5 samples), 0%)')" onmouseout="c()" data-search="send /users/wangyongdong/reactnative/please-solomon/node_modules/koa-static/node_modules/koa-send/index.js:37" data-funcname="send /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-static/node_modules/koa-send/index.js:37">
+  <title>send /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-static/node_modules/koa-send/index.js:37 (5 samples), 0%)</title>
+  <rect x="1189.6" data-x="1189.6" y="433" width="0.3000000000001819" data-width="0.3000000000001819" height="15" data-height="15" fill="rgb(232, 173, 29)" rx="2" ry="2"></rect>
+  <text data-x="1189.6" x="1189.6" y="443.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('serve /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-static/index.js:39 (10 samples), 0%)')" onmouseout="c()" data-search="serve /users/wangyongdong/reactnative/please-solomon/node_modules/koa-static/index.js:39" data-funcname="serve /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-static/index.js:39">
+  <title>serve /Users/wangyongdong/reactNative/please-solomon/node_modules/koa-static/index.js:39 (10 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="449" width="0.5" data-width="0.5" height="15" data-height="15" fill="rgb(228, 161, 25)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="459.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35 (10 samples), 0%)')" onmouseout="c()" data-search="dispatch /users/wangyongdong/reactnative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35" data-funcname="dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35">
+  <title>dispatch /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:35 (10 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="465" width="0.5" data-width="0.5" height="15" data-height="15" fill="rgb(235, 177, 33)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="475.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s(' /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:31 (10 samples), 0%)')" onmouseout="c()" data-search=" /users/wangyongdong/reactnative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:31" data-funcname=" /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:31">
+  <title> /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/node_modules/koa-compose/index.js:31 (10 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="481" width="0.5" data-width="0.5" height="15" data-height="15" fill="rgb(225, 196, 22)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="491.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('handleRequest /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/lib/application.js:144 (11 samples), 0%)')" onmouseout="c()" data-search="handlerequest /users/wangyongdong/reactnative/please-solomon/node_modules/koa/lib/application.js:144" data-funcname="handleRequest /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/lib/application.js:144">
+  <title>handleRequest /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/lib/application.js:144 (11 samples), 0%)</title>
+  <rect x="1189.4" data-x="1189.4" y="497" width="0.5" data-width="0.5" height="15" data-height="15" fill="rgb(242, 146, 41)" rx="2" ry="2"></rect>
+  <text data-x="1189.4" x="1189.4" y="507.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('handleRequest /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/lib/application.js:130 (13 samples), 0.1%)')" onmouseout="c()" data-search="handlerequest /users/wangyongdong/reactnative/please-solomon/node_modules/koa/lib/application.js:130" data-funcname="handleRequest /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/lib/application.js:130">
+  <title>handleRequest /Users/wangyongdong/reactNative/please-solomon/node_modules/koa/lib/application.js:130 (13 samples), 0.1%)</title>
+  <rect x="1189.3" data-x="1189.3" y="513" width="0.6000000000001364" data-width="0.6000000000001364" height="15" data-height="15" fill="rgb(233, 146, 30)" rx="2" ry="2"></rect>
+  <text data-x="1189.3" x="1189.3" y="523.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('emitTwo events.js:124 (13 samples), 0.1%)')" onmouseout="c()" data-search="emittwo events.js:124" data-funcname="emitTwo events.js:124">
+  <title>emitTwo events.js:124 (13 samples), 0.1%)</title>
+  <rect x="1189.3" data-x="1189.3" y="529" width="0.6000000000001364" data-width="0.6000000000001364" height="15" data-height="15" fill="rgb(244, 143, 43)" rx="2" ry="2"></rect>
+  <text data-x="1189.3" x="1189.3" y="539.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('emit events.js:156 (13 samples), 0.1%)')" onmouseout="c()" data-search="emit events.js:156" data-funcname="emit events.js:156">
+  <title>emit events.js:156 (13 samples), 0.1%)</title>
+  <rect x="1189.3" data-x="1189.3" y="545" width="0.6000000000001364" data-width="0.6000000000001364" height="15" data-height="15" fill="rgb(237, 143, 36)" rx="2" ry="2"></rect>
+  <text data-x="1189.3" x="1189.3" y="555.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('parserOnIncoming _http_server.js:562 (13 samples), 0.1%)')" onmouseout="c()" data-search="parseronincoming _http_server.js:562" data-funcname="parserOnIncoming _http_server.js:562">
+  <title>parserOnIncoming _http_server.js:562 (13 samples), 0.1%)</title>
+  <rect x="1189.3" data-x="1189.3" y="561" width="0.6000000000001364" data-width="0.6000000000001364" height="15" data-height="15" fill="rgb(241, 149, 39)" rx="2" ry="2"></rect>
+  <text data-x="1189.3" x="1189.3" y="571.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('parserOnHeadersComplete _http_common.js:61 (13 samples), 0.1%)')" onmouseout="c()" data-search="parseronheaderscomplete _http_common.js:61" data-funcname="parserOnHeadersComplete _http_common.js:61">
+  <title>parserOnHeadersComplete _http_common.js:61 (13 samples), 0.1%)</title>
+  <rect x="1189.3" data-x="1189.3" y="577" width="0.6000000000001364" data-width="0.6000000000001364" height="15" data-height="15" fill="rgb(221, 149, 18)" rx="2" ry="2"></rect>
+  <text data-x="1189.3" x="1189.3" y="587.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"></text>
+</g>
+<g class="func_g " onmouseover="s('(root) (23,940 samples), 100%)')" onmouseout="c()" data-search="(root)" data-funcname="(root)">
+  <title>(root) (23,940 samples), 100%)</title>
+  <rect x="10" data-x="10" y="593" width="1180" data-width="1180" height="15" data-height="15" fill="rgb(245, 200, 44)" rx="2" ry="2"></rect>
+  <text data-x="13" x="13" y="603.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)">(root)</text>
+</g>
+
+</svg>
