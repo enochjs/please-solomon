@@ -61,22 +61,27 @@ export default class CommonController {
   }
 
   @Get('api/profiler')
-  public async getProfiler () {
-    const duration = 30
+  public async getProfiler (
+    @Context() ctx: Koa.Context,
+  ) {
+    const duration = 3
     profiler.startProfiling('profile sample')
-    setTimeout(() => {
-      const profileData = profiler.stopProfiling()
-      console.log(profileData.getHeader())
-      profileData.export((err, result) => {
-        if (err) {
-            console.log(err)
-        } else {
-          fs.writeFileSync('profileData.cpuprofile', result)
-          console.log('Dumping data done')
-        }
-        profileData.delete()
-     })
-    }, duration * 1000)
-    return 'ing'
+    const result = await await new Promise((re) => {
+      setTimeout(() => {
+        const profileData = profiler.stopProfiling()
+        console.log(profileData.getHeader())
+        profileData.export((err, data) => {
+          if (err) {
+              console.log(err)
+          } else {
+            fs.writeFileSync('profileData.cpuprofile', data)
+            console.log('Dumping data done')
+          }
+          re(data)
+          profileData.delete()
+       })
+      }, duration * 1000)
+    })
+    ctx.body = result
   }
 }

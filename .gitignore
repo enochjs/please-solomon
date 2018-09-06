@@ -18,3 +18,6 @@ yarn-error.log
 #logs
 logs/**/*.log
 *.log
+
+# cpuprofile
+.cpuprofile
