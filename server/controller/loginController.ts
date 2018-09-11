@@ -1,8 +1,8 @@
 import Koa from 'koa'
 import { Logger } from 'winston'
-import { Controller, Get, Post, TYPE, Context, ResponseBody, RequestBody } from '../inversifyKoa'
+import { Controller, Get, Post, TYPE, Context, ResponseBody, RequestBody, Session } from '../inversifyKoa'
 import { provideNamed, inject } from '../inversifyKoa/ioc'
-import AuthDb from '../db/auth'
+import UserDb from '../db/user'
 
 @provideNamed(TYPE.Controller, 'LoginController')
 @Controller('/')
@@ -11,8 +11,8 @@ export default class LoginController {
   @inject('logger')
   private logger: Logger
 
-  @inject('AuthDb')
-  private authDb: AuthDb
+  @inject('UserDb')
+  private userDb: UserDb
 
   /**
    * login
@@ -31,15 +31,16 @@ export default class LoginController {
   @Post('login/check')
   @ResponseBody
   public async loginCheck (
-    @RequestBody() username: 'string',
-    @RequestBody() password: 'string',
-    @Context() ctx: Koa.Context,
+    @RequestBody('username') username: 'string',
+    @RequestBody('password') password: 'string',
+    @Session() session: any,
   ) {
     this.logger.info('Post login/check', username, password)
-    const result = await this.authDb.checkUser(username, password)
-    this.logger.info('Post login/check', result)
+    const result = await this.userDb.checkUser(username, password)
+    this.logger.info('Post login/check', result, session)
     if (result) {
-      ctx.redirect('/')
+      session.loginUserName = username
+      return true
     }
     return false
   }

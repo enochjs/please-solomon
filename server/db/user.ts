@@ -1,6 +1,7 @@
 import { IMonkManager, id } from 'monk'
+import * as md5 from 'md5'
 import { Logger } from 'winston'
-import { pick } from 'lodash'
+import { pick, repeat } from 'lodash'
 import { provide, inject } from '../inversifyKoa/ioc'
 import { filterDecorator } from '../utils/decorators'
 
@@ -34,6 +35,35 @@ export default class UserDb {
   @inject('Mongodb')
   private mongodb: IMonkManager
 
+  private formatCode (value: number) {
+    const length = value.toString().length
+    return repeat('0', 5 - length) + value
+  }
+
+  /**
+   * 用户登录用户名密码匹配
+   * @param {string} username
+   * @param {string} password
+   * @returns
+   * @memberof AuthDb
+   */
+  @filterDecorator({
+    username: { type: 'string', required: true },
+    password: { type: 'string', required: true },
+  })
+  public async checkUser (username: string, password: string) {
+    const userCollection = await this.mongodb.get('user')
+    const user: any = await userCollection.find({ code: username })
+    if (!user.length) {
+      throw new Error('用户名不存在！')
+    }
+    if (md5(password) === user[0].password) {
+      return true
+    } else {
+      throw new Error('用户名密码错误！')
+    }
+  }
+
   /**
    * add usesr
    * @param {IUserParam} param
@@ -62,8 +92,11 @@ export default class UserDb {
     if (idCard.length) {
       throw new Error('该身份证已被注册过！')
     }
+    const allusers = await userCollection.find({})
     const result = await userCollection.insert({
       name: param.name,
+      code: this.formatCode(allusers.length + 1),
+      password: md5('jesusLovesUs'),
       mobile: param.mobile,
       birthday: param.birthday,
       idCard: param.idCard,

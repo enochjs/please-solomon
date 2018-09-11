@@ -312,6 +312,8 @@
     .then(result => {
       if (result.status === 0) {
         document.querySelector('#error-msg').innerHTML = result.data
+      } else {
+        window.location.href ="http://127.0.0.1:7000"
       }
     })
   }

@@ -193,6 +193,7 @@ export class InversifyKoaServer {
         case PARAMETER_TYPE.BODY: args[item.index] = this.getParam(ctx.request, 'body', item.parameterName); break
         case PARAMETER_TYPE.HEADERS: args[item.index] = this.getParam(ctx.request, 'headers', item.parameterName); break
         case PARAMETER_TYPE.COOKIES: args[item.index] = this.getParam(ctx, 'cookies', item.parameterName); break
+        case PARAMETER_TYPE.SESSION: args[item.index] = this.getParam(ctx, 'session', item.parameterName); break
       }
 
     }
