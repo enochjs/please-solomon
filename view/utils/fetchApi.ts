@@ -13,6 +13,7 @@ export function fetchJSON (url: string, params: any) {
     },
   }
   return fetch(url, fetchparam).then((resp) => resp.json()).then((result: { status: number, data: any }) => {
+    console.log('>>>>', result)
     if (result.status) {
       return result.data
     } else {

@@ -39,6 +39,12 @@
   dependencies:
     "@types/node" "*"
 
+"@types/axios@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@types/axios/-/axios-0.14.0.tgz#ec2300fbe7d7dddd7eb9d3abf87999964cafce46"
+  dependencies:
+    axios "*"
+
 "@types/bluebird@^3.5.20":
   version "3.5.26"
   resolved "https://registry.yarnpkg.com/@types/bluebird/-/bluebird-3.5.26.tgz#a38c438ae84fa02431d6892edf86e46edcbca291"
@@ -237,6 +243,12 @@
   dependencies:
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
+
+"@types/sha256@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@types/sha256/-/sha256-0.2.0.tgz#e91194d70f4eb67f08812e847feecf5146f4afdd"
+  dependencies:
+    "@types/node" "*"
 
 "@types/uuid@^3.4.3":
   version "3.4.4"
@@ -736,6 +748,13 @@ aws-sign2@~0.7.0:
 aws4@^1.2.1, aws4@^1.8.0:
   version "1.8.0"
   resolved "http://registry.npm.taobao.org/aws4/download/aws4-1.8.0.tgz#f0e003d9ca9e7f59c7a508945d7b2ef9a04a542f"
+
+axios@*, axios@^0.18.0:
+  version "0.18.0"
+  resolved "http://registry.npm.taobao.org/axios/download/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
+  dependencies:
+    follow-redirects "^1.3.0"
+    is-buffer "^1.1.5"
 
 babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
   version "6.26.0"
@@ -3111,7 +3130,7 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-follow-redirects@^1.0.0:
+follow-redirects@^1.0.0, follow-redirects@^1.3.0:
   version "1.7.0"
   resolved "http://registry.npm.taobao.org/follow-redirects/download/follow-redirects-1.7.0.tgz#489ebc198dc0e7f64167bd23b03c4c19b5784c76"
   dependencies:
@@ -4143,6 +4162,10 @@ js-beautify@^1.6.12:
     glob "^7.1.3"
     mkdirp "~0.5.0"
     nopt "~4.0.1"
+
+js-sha256@^0.9.0:
+  version "0.9.0"
+  resolved "http://registry.npm.taobao.org/js-sha256/download/js-sha256-0.9.0.tgz#0b89ac166583e91ef9123644bd3c5334ce9d0966"
 
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
