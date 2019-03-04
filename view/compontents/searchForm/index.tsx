@@ -55,7 +55,7 @@ export class SearchForm extends Component<ISearhFormProps, any> {
         }}
       >
         {item.options && item.options.map((option, index) =>
-          <Option key={index}
+          <Option key={index.toString()}
             value={item.value && option[item.value].toString()}
           >{item.text && option[item.text]}</Option>)}
       </Select>)

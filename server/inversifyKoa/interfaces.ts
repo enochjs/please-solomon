@@ -28,9 +28,9 @@ declare namespace interfaces {
     type: PARAMETER_TYPE
   }
 
-  export type BeforeMetadata = (args: any[], ctx: koa.Context, next: KoaRequestHandler) => any[]
+  export type BeforeMetadata = (args: any[], ctx: Router.IRouterContext, next: KoaRequestHandler) => any[]
 
-  export type AfterMetadata = (result: any | Promise<any>, ctx: koa.Context, next: KoaRequestHandler) => any | Promise<any>
+  export type AfterMetadata = (result: any | Promise<any>, ctx: Router.IRouterContext, next: KoaRequestHandler) => any | Promise<any>
 
   export interface IController {}
 

@@ -153,7 +153,7 @@ export class InversifyKoaServer {
       controller.constructor,
       key,
     )
-    return async (ctx: Koa.Context, next: () => Promise<any>) => {
+    return async (ctx: Router.IRouterContext, next: () => Promise<any>) => {
 
       let args = this.extractParameters(ctx, next, parameterMetadata)
       // 绑定上下文 this
