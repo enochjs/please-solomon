@@ -1,13 +1,14 @@
-// import * as md5 from 'md5'
 import axios from 'axios'
-import { provide } from '../inversifyKoa/ioc'
+import * as fs from 'fs'
+import * as path from 'path'
+import { provide, inject } from '../inversifyKoa/ioc'
+import WordLibaryDb from '../db/wordLibary'
 
 @provide('BaiduTranslateService')
 export default class BaiduTranslateService {
 
-  // private appid = '20190304000273529'
-
-  // private key = '8BUKsnkzxvEsRPOuD7kF'
+  @inject('WordLibaryDb')
+  private wordLibaryDb: WordLibaryDb
 
   private voiceAppid = 'EIPjGBhgFHPucETvMGxxcMiV'
 
@@ -18,30 +19,49 @@ export default class BaiduTranslateService {
     return result.data
   }
 
-  public async getTranslate (query: string) {
+  private async downloadSong (url: string, filename: string, dir: string, dst: string) {
+    axios({
+      method: 'get',
+      url,
+      responseType: 'stream',
+    }).then((result) => {
+      result.data.pipe(fs.createWriteStream(path.join(__dirname, `/../../${dir}`, filename + '.mp3')))
+      .on('error', function (err: any) {
+          console.log(filename, ' download error!', err)
+      })
+      .on('close', () => {
+          const stream = fs.createReadStream(path.join(__dirname, `/../../${dir}`, filename + '.mp3'))
+          /** 不能直接用response data 会有bug，数据会损坏 */
+          this.wordLibaryDb.addWord({ data: stream, word: filename, dst })
+          fs.readFile(path.join(__dirname, `/../../${dir}`, 'contents.json'), (error, data) => {
+            let contents = {}
+            if (data) {
+              try {
+                contents = JSON.parse(data.toString())
+              } catch (error) {
+                console.log('...parse content err', error)
+              }
+            }
+            if (typeof contents !== 'object') {
+              contents = {}
+            }
+            contents[filename] = true
+            fs.writeFile(path.join(__dirname, `/../../${dir}`, 'contents.json'), JSON.stringify(contents), (err) => {
+              console.log(filename, ' write error!', err)
+            })
+          })
+      })
+    })
+}
 
+  public async getTranslate (query: string) {
     const token = await this.getToken()
     const translate: any = await axios.get(`https://fanyi.baidu.com/transapi?from=auto&to=cht&query=${query}`)
-
-    // const salt = new Date().getTime()
-    // const curtime = Math.round(new Date().getTime() / 1000)
-    // const from = 'auto'
-    // const to = 'auto'
-    // const translate: any = await axios.get(`http://api.fanyi.baidu.com/api/trans/vip/translate`, {
-    //   params: {
-    //     q: query,
-    //     appid: this.appid,
-    //     salt,
-    //     from,
-    //     to,
-    //     curtime,
-    //     sign: md5(this.appid + query + salt + this.key),
-    //   },
-    // })
-
+    const voiceUrl = `http://tsn.baidu.com/text2audio?tex=${query}&lan=zh&cuid=12111111&ctp=1&tok=${token.access_token}`
+    this.downloadSong(voiceUrl, query, 'mp3', translate.data.data[0].dst)
     return {
       translate: translate.data.data,
-      voiceUrl: `http://tsn.baidu.com/text2audio?tex=${query}&lan=zh&cuid=12111111&ctp=1&tok=${token.access_token}`,
+      voiceUrl,
     }
   }
 

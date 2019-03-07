@@ -19,7 +19,7 @@ export default class Config {
 
   public getMongoDB () {
     return {
-      localdev: 'mongodb://localhost:27017/please',
+      localdev: 'mongodb://localhost:27017/',
     }[ENV]
   }
 

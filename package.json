@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "cpxmp3": "cpx \"mp3/*.{json,mp3}\" dist/static/mp3",
     "cpx": "cpx \"server/**/*.{css,json,png,svg,ejs}\" dist  --watch",
     "copy": "cpx \"server/**/*.{css,json,png,svg,ejs}\" dist",
     "compile": "tsc -w -p .",
@@ -35,7 +36,7 @@
     "lodash": "^4.17.10",
     "md5": "^2.2.1",
     "moment": "^2.22.2",
-    "mongodb": "^3.0.10",
+    "mongodb": "^3.1.13",
     "monk": "^6.0.6",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",

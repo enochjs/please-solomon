@@ -4856,7 +4856,7 @@ mongodb@^2.1.18:
     mongodb-core "2.1.20"
     readable-stream "2.2.7"
 
-mongodb@^3.0.10:
+mongodb@^3.1.13:
   version "3.1.13"
   resolved "http://registry.npm.taobao.org/mongodb/download/mongodb-3.1.13.tgz#f8cdcbb36ad7a08b570bd1271c8525753f75f9f4"
   dependencies:

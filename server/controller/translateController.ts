@@ -1,7 +1,9 @@
 import { Logger } from 'winston'
-import { Controller, Get, TYPE, QueryParam, ResponseBody } from '../inversifyKoa'
+import Koa from 'koa'
+import { Controller, Get, TYPE, QueryParam, ResponseBody, Context } from '../inversifyKoa'
 import { provideNamed, inject } from '../inversifyKoa/ioc'
 import BaiduTranslateService from '../service/baiduTranslateService'
+import WordLibaryDb from '../db/wordLibary'
 
 @provideNamed(TYPE.Controller, 'TranslateController')
 @Controller('/')
@@ -13,14 +15,40 @@ export default class TranslateController {
   @inject('BaiduTranslateService')
   private baiduTranslateService: BaiduTranslateService
 
+  @inject('WordLibaryDb')
+  private wordLibaryDb: WordLibaryDb
+
+  /**
+   * 翻译
+   * @param {string} query
+   * @returns
+   * @memberof TranslateController
+   */
   @Get('api/translate/baidu')
   @ResponseBody
-  public async getPendingList (
+  public async getTranslateBaidu (
     @QueryParam('query') query: string,
   ) {
     const result = await this.baiduTranslateService.getTranslate(query)
     this.logger.info(`Get api/translate/baidu query = ${typeof query}: ${result}`)
     return result
+  }
+
+  /**
+   * voice
+   * @param {string} query
+   * @param {Koa.Context} ctx
+   * @memberof TranslateController
+   */
+  @Get('api/translate/word')
+  public async getTranslateWord (
+    @QueryParam('query') query: string,
+    @Context() ctx: Koa.Context,
+  ) {
+    const downloadStream = await this.wordLibaryDb.getWord(query)
+    ctx.set('Content-Type', 'audio/mp3')
+    ctx.set('accept-ranges', 'bytes')
+    ctx.body = downloadStream
   }
 
 }
