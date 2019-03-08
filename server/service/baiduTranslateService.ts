@@ -14,9 +14,18 @@ export default class BaiduTranslateService {
 
   private voiceKey = 'j0k7Q9SpfWsKqvxNhK9gxFMSauoHjtKh'
 
+  private expiresTime = 0
+
+  private token: any = {}
+
   private async getToken () {
-    const result = await axios.get(`https://openapi.baidu.com/oauth/2.0/token?grant_type=client_credentials&client_id=${this.voiceAppid}&client_secret=${this.voiceKey}`)
-    return result.data
+
+    if (new Date().getTime() > this.expiresTime) {
+      const result = await axios.get(`https://openapi.baidu.com/oauth/2.0/token?grant_type=client_credentials&client_id=${this.voiceAppid}&client_secret=${this.voiceKey}`)
+      this.token = result.data
+      this.expiresTime = new Date().getTime() + result.data.expires_in * 1000
+    }
+    return this.token
   }
 
   private async downloadSong (url: string, filename: string, dir: string, dst: string) {
@@ -32,7 +41,7 @@ export default class BaiduTranslateService {
       .on('close', () => {
           const stream = fs.createReadStream(path.join(__dirname, `/../../${dir}`, filename + '.mp3'))
           /** 不能直接用response data 会有bug，数据会损坏 */
-          this.wordLibaryDb.addWord({ data: stream, word: filename, dst })
+          this.wordLibaryDb.addWord({ voice: stream, word: filename, explanation: dst })
           fs.readFile(path.join(__dirname, `/../../${dir}`, 'contents.json'), (error, data) => {
             let contents = {}
             if (data) {
@@ -52,15 +61,16 @@ export default class BaiduTranslateService {
           })
       })
     })
-}
+  }
 
   public async getTranslate (query: string) {
     const token = await this.getToken()
     const translate: any = await axios.get(`https://fanyi.baidu.com/transapi?from=auto&to=cht&query=${query}`)
     const voiceUrl = `http://tsn.baidu.com/text2audio?tex=${query}&lan=zh&cuid=12111111&ctp=1&tok=${token.access_token}`
-    this.downloadSong(voiceUrl, query, 'mp3', translate.data.data[0].dst)
+    const explanation = translate.data.data ? translate.data.data.map((item: any) => item.dst).join(';') : ''
+    this.downloadSong(voiceUrl, query, 'mp3', explanation)
     return {
-      translate: translate.data.data,
+      explanation,
       voiceUrl,
     }
   }

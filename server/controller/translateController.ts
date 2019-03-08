@@ -29,6 +29,10 @@ export default class TranslateController {
   public async getTranslateBaidu (
     @QueryParam('query') query: string,
   ) {
+    const libaryWord = await this.wordLibaryDb.getWord(query)
+    if (libaryWord) {
+      return libaryWord
+    }
     const result = await this.baiduTranslateService.getTranslate(query)
     this.logger.info(`Get api/translate/baidu query = ${typeof query}: ${result}`)
     return result
@@ -40,12 +44,12 @@ export default class TranslateController {
    * @param {Koa.Context} ctx
    * @memberof TranslateController
    */
-  @Get('api/translate/word')
+  @Get('api/translate/voice')
   public async getTranslateWord (
     @QueryParam('query') query: string,
     @Context() ctx: Koa.Context,
   ) {
-    const downloadStream = await this.wordLibaryDb.getWord(query)
+    const downloadStream = await this.wordLibaryDb.getVoice(query)
     ctx.set('Content-Type', 'audio/mp3')
     ctx.set('accept-ranges', 'bytes')
     ctx.body = downloadStream

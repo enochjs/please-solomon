@@ -40,7 +40,7 @@ export default class BibleDetail extends React.Component<any, any> {
       <div className="translate-pop ant-popover ant-popover-placement-top" style={{ left: this.state.left, top: this.state.top }}>
         <div className="translate-pop-content ant-popover-content">
           <div className="ant-popover-arrow"></div>
-          {this.props.data.translate.map((t) => <div>{t.dst}</div>)}
+          {this.props.data.explanation}
           {<audio src={this.props.data.voiceUrl} controls />}
         </div>
       </div>
