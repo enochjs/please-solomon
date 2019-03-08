@@ -11,7 +11,7 @@ export default async function html (ctx: Context)  {
   }
   let main = `${config.getServerName()}/main.js`
   if (ENV === 'localdev') {
-    main = `http://127.0.0.1:7012/main.js`
+    main = `http://192.168.103.135:7012/main.js`
   }
   const CONSTANTS: any = {
     STATUS: [

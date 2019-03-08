@@ -4,9 +4,12 @@ import { Row, Col, Tooltip, Popconfirm } from 'antd'
 import { chunk } from 'lodash'
 import bibleArticles from '../../config/bibleArticles'
 import bibleContents from '../../config/bibleContents'
+import ReactAudio from '../../compontents/reactAudio'
 import { IBibleStore } from './store'
 
 import './index.less'
+import { listeners } from 'cluster'
+import { none } from 'html-webpack-plugin/lib/chunksorter'
 
 @connect('IBibleStore')
 export default class BibleDetail extends React.Component<any, any> {
@@ -16,7 +19,25 @@ export default class BibleDetail extends React.Component<any, any> {
     this.state = {
       left: 0,
       top: 0,
+      display: 'none',
     }
+  }
+
+  reactaudio: any
+
+  listener: any
+
+  componentDidMount () {
+    this.listener = document.addEventListener('click', (e: any) => {
+      if (e.target.closest('.translate-pop')) {
+        return
+      }
+      this.setState({ display: 'none' })
+    })
+  }
+
+  componentWillUnmount = () => {
+    this.listener && document.removeEventListener('click', this.listener)
   }
 
   handleDoubleClick = (e) => {
@@ -24,7 +45,7 @@ export default class BibleDetail extends React.Component<any, any> {
     const clientX = e.clientX
     const clientY = e.clientY
     this.props.getTranslate({ query }, () => {
-      this.setState({ left: clientX, top: clientY })
+      this.setState({ left: clientX, top: clientY, display: '' })
     })
   }
 
@@ -37,17 +58,30 @@ export default class BibleDetail extends React.Component<any, any> {
     }
     return <div className="bible-detail">
       <h2 className="text-center">{book}</h2>
-      <div className="translate-pop ant-popover ant-popover-placement-top" style={{ left: this.state.left, top: this.state.top }}>
+      <div
+        className="translate-pop ant-popover ant-popover-placement-top"
+        style={{ left: this.state.left, top: this.state.top, display: this.state.display }}
+      >
         <div className="translate-pop-content ant-popover-content">
           <div className="ant-popover-arrow"></div>
-          {this.props.data.explanation}
-          {<audio src={this.props.data.voiceUrl} controls />}
+          <Row>
+            <Col span={16}>{this.props.data.explanation}</Col>
+            <Col span={8}>
+              <ReactAudio
+                ref={(r) => this.reactaudio = r}
+                musiclist={[{ src: this.props.data.voiceUrl || '', lrc: [] }]}
+                size="small"
+                showTime={false}
+                audioId={`reactaudio`}
+              />
+            </Col>
+          </Row>
         </div>
       </div>
       {
         [articles.map((item, index) => <div key={index.toString()} onDoubleClick={this.handleDoubleClick} className="mb10" style={{ textIndent: 20 }}>{item}</div>)]
       }
       <Popconfirm placement="topRight" title={'11111'} okText="Yes" cancelText="No" />
-      </div>
+    </div>
   }
 }
