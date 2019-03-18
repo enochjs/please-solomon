@@ -1,16 +1,11 @@
 import * as React from 'react'
 import { connect } from 'redux-zero-x'
-import { Row, Col, Tooltip, Popconfirm } from 'antd'
-import { chunk } from 'lodash'
+import { Row, Col, Popconfirm } from 'antd'
 import bibleArticles from '../../config/bibleArticles'
 import bibleContents from '../../config/bibleContents'
 import ReactAudio from '../../compontents/reactAudio'
-import { IBibleStore } from './store'
 
 import './index.less'
-import { listeners } from 'cluster'
-import { none } from 'html-webpack-plugin/lib/chunksorter'
-
 @connect('IBibleStore')
 export default class BibleDetail extends React.Component<any, any> {
 
@@ -81,7 +76,7 @@ export default class BibleDetail extends React.Component<any, any> {
       {
         [articles.map((item, index) => <div key={index.toString()} onDoubleClick={this.handleDoubleClick} className="mb10" style={{ textIndent: 20 }}>{item}</div>)]
       }
-      <Popconfirm placement="topRight" title={'11111'} okText="Yes" cancelText="No" />
+      <Popconfirm placement="topRight" title={''} okText="Yes" cancelText="No" />
     </div>
   }
 }

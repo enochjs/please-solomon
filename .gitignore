@@ -21,3 +21,6 @@ logs/**/*.log
 
 # cpuprofile
 .cpuprofile
+
+# mp3
+mp3
