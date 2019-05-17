@@ -3,7 +3,7 @@ import * as md5 from 'md5'
 import { Logger } from 'winston'
 import { pick, repeat } from 'lodash'
 import { provide, inject } from '../inversifyKoa/ioc'
-import { filterDecorator } from '../utils/decorators'
+import { Converter, Convert } from '../utils/decorators'
 
 export interface IUserParam {
   _id?: string,
@@ -47,11 +47,11 @@ export default class UserDb {
    * @returns
    * @memberof AuthDb
    */
-  @filterDecorator({
-    username: { type: 'string', required: true },
-    password: { type: 'string', required: true },
-  })
-  public async checkUser (username: string, password: string) {
+  @Converter()
+  public async checkUser (
+    @Convert({ username: { type: 'string', require: true } }) username: string,
+    @Convert({ password: { type: 'string', require: true } }) password: string,
+  ) {
     const userCollection = await this.mongodb.get('user')
     const user: any = await userCollection.find({ code: username })
     if (!user.length) {
@@ -70,19 +70,20 @@ export default class UserDb {
    * @returns
    * @memberof UserDb
    */
-  @filterDecorator({
-    name: { type: 'string', required: true },
-    mobile: { type: 'number', required: true },
-    birthday: { type: 'string', required: true },
-    idCard: { type: 'string', required: true },
-    sex: { type: 'number', required: true },
-    height: { type: 'number', required: true },
-    weight: { type: 'number', required: true },
-    images: { type: 'string[]', required: true },
-    introduce: { type: 'string', required: true },
-    operator: { type: 'string', required: false },
-  })
-  public async addUser (param: IUserParam) {
+  @Converter()
+  public async addUser (
+    @Convert({
+      name: { type: 'string', required: true, msg: '参数必传'},
+      mobile: { type: 'number', required: true, msg: '参数必传'},
+      birthday: { type: 'string', required: true, msg: '参数必传'},
+      idCard: { type: 'string', required: true, msg: '参数必传'},
+      sex: { type: 'number', required: true, msg: '参数必传'},
+      height: { type: 'number', required: true, msg: '参数必传'},
+      weight: { type: 'number', required: true, msg: '参数必传'},
+      images: [{ type: 'string', required: true, msg: '参数必传'}],
+      introduce: { type: 'string', required: true, msg: '参数必传'},
+      operator: { type: 'string', required: true, msg: '参数必传'},
+    }) param: IUserParam) {
     const userCollection = this.mongodb.get('user')
     const mobile = await userCollection.find({ mobile: param.mobile })
     const idCard = await userCollection.find({ idCard: param.idCard })
@@ -115,20 +116,21 @@ export default class UserDb {
    * @param {IUserParam} param
    * @memberof UserDb
    */
-  @filterDecorator({
-    _id: { type: 'string', required: true },
-    name: { type: 'string', required: true },
-    mobile: { type: 'number', required: true },
-    birthday: { type: 'string', required: true },
-    idCard: { type: 'string', required: true },
-    sex: { type: 'number', required: true },
-    height: { type: 'number', required: true },
-    weight: { type: 'number', required: true },
-    images: { type: 'string[]', required: true },
-    introduce: { type: 'string', required: true },
-    operator: { type: 'string', required: false },
-  })
-  public async updateUser (param: IUserParam) {
+  @Converter()
+  public async updateUser (
+    @Convert({
+      _id: { type: 'string', required: true },
+      name: { type: 'string', required: true, msg: '参数必传'},
+      mobile: { type: 'number', required: true, msg: '参数必传'},
+      birthday: { type: 'string', required: true, msg: '参数必传'},
+      idCard: { type: 'string', required: true, msg: '参数必传'},
+      sex: { type: 'number', required: true, msg: '参数必传'},
+      height: { type: 'number', required: true, msg: '参数必传'},
+      weight: { type: 'number', required: true, msg: '参数必传'},
+      images: [{ type: 'string', required: true, msg: '参数必传'}],
+      introduce: { type: 'string', required: true, msg: '参数必传'},
+      operator: { type: 'string', required: true, msg: '参数必传'},
+    }) param: IUserParam) {
     const userCollection = this.mongodb.get('user')
     const mobile: any = await userCollection.find({ mobile: param.mobile })
     const idCard: any = await userCollection.find({ idCard: param.idCard })
@@ -159,10 +161,9 @@ export default class UserDb {
    * @returns
    * @memberof UserDb
    */
-  @filterDecorator({
-    _id: { type: 'string', required: true },
-  })
-  public async delUserList (_id: string) {
+  @Converter()
+  public async delUserList (
+    @Convert({ _id: { type: 'string', required: true } }) _id: string) {
     const userCollection = this.mongodb.get('user')
     const result = await userCollection.remove({_id: id(_id)})
     return result
@@ -174,19 +175,21 @@ export default class UserDb {
    * @returns
    * @memberof UserDb
    */
-  @filterDecorator({
-    name: { type: 'string', required: false },
-    mobile: { type: 'number', required: false },
-    idCard: { type: 'string', required: false },
-    sex: { type: 'number', required: false },
-  })
-  public async getUserList (param: IQueryParam) {
+  @Converter()
+  public async getUserList (
+    @Convert({
+      name: { type: 'string' },
+      mobile: { type: 'string' },
+      idCard: { type: 'string' },
+      sex: { type: 'number' },
+    }) param: IQueryParam) {
     const queryParam = pick(param, ['name', 'mobile', 'idCard', 'sex'])
     const userCollection = this.mongodb.get('user')
-    this.logger.info('mongo query param', Object.keys(queryParam).map((key) => ({ [key]: queryParam[key] })))
+    const squeryParam = Object.keys(queryParam).filter((key) => queryParam[key] !== '')
+    this.logger.info('mongo query param', Object.keys(squeryParam).map((key) => ({ [key]: squeryParam[key] })))
     let result = []
-    if (Object.keys(queryParam).length) {
-      result = await userCollection.find({ $and: Object.keys(queryParam).map((key) => ({ [key]: queryParam[key] })) })
+    if (Object.keys(squeryParam).length) {
+      result = await userCollection.find({ $and: Object.keys(squeryParam).map((key) => ({ [key]: squeryParam[key] })) })
     } else {
       result = await userCollection.find({})
     }

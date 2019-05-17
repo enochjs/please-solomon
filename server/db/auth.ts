@@ -1,7 +1,7 @@
 import { IMonkManager } from 'monk'
 import * as md5 from 'md5'
 import { provide, inject } from '../inversifyKoa/ioc'
-import { filterDecorator } from '../utils/decorators'
+import { Converter, Convert } from '../utils/decorators'
 
 export interface ImageParam {
   name: string,
@@ -21,11 +21,11 @@ export default class AuthDb {
    * @returns
    * @memberof AuthDb
    */
-  @filterDecorator({
-    username: { type: 'string', required: true },
-    password: { type: 'string', required: true },
-  })
-  public async checkUser (username: string, password: string) {
+  @Converter()
+  public async checkUser (
+    @Convert({ username: { type: 'string', require: true } }) username: string,
+    @Convert({ password: { type: 'string', require: true } }) password: string,
+  ) {
     const authCollection = await this.mongodb.get('auth')
     const user: any = await authCollection.find({ username })
     if (!user.length) {
