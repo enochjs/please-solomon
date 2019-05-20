@@ -11,12 +11,23 @@ const getType = (data: any) => {
 
 function convertArg (arg: any, config: any) {
   let convArg = arg
+  if ((arg === '' || arg === undefined || arg === null) && config.required) {
+    throw new Error(`arg can not be null`)
+  }
   switch (config.type) {
     case 'number':
-      convArg = Number(arg)
+      if (arg === '' || arg === undefined || arg === null) {
+        convArg = null
+      } else {
+        convArg = Number(arg)
+      }
       break
     case 'string':
-      convArg = arg.toString()
+      if (arg === '' || arg === undefined || arg === null) {
+        convArg = null
+      } else {
+        convArg = arg.toString()
+      }
       break
     default:
       break

@@ -7,6 +7,6 @@
       "NODE_ENV": "localdev"
   },
   "execMap": {
-      "js": "node --inspect=5858"
+      "js": "node --inspect=5959"
   }
 }

@@ -19,7 +19,7 @@ export interface IProps extends PendingListStore {
   formValue: any
 }
 
-@connect('PendingListStore')
+@connect(['pendingListStore'])
 export default class PendingList extends React.Component<IProps, any> {
 
   constructor (props: IProps) {

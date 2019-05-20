@@ -1,4 +1,5 @@
 import { createLogger, transports, Logger, format } from 'winston'
+import { TMiddleware } from 'monk'
 import { container } from '../inversifyKoa/ioc'
 import Config from '../config'
 
@@ -27,3 +28,11 @@ const logger: Logger = createLogger({
 })
 
 container.bind<Logger>('logger').toConstantValue(logger)
+
+export const mongoLogger: TMiddleware = () => (next: (args: {}, method: string) => Promise<any>) => (args: any, method: string) => {
+  logger.info(`monk method ${method}, sql: ${JSON.stringify(args.query)}`)
+  return next(args, method).then(function (result: any) {
+    logger.info(`monk method ${method}, sql: ${JSON.stringify(args.query)}`, result)
+    return result
+  })
+}

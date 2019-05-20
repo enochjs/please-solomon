@@ -1,6 +1,5 @@
 import { IMonkManager, id } from 'monk'
 import * as md5 from 'md5'
-import { Logger } from 'winston'
 import { pick, repeat } from 'lodash'
 import { provide, inject } from '../inversifyKoa/ioc'
 import { Converter, Convert } from '../utils/decorators'
@@ -28,9 +27,6 @@ export interface IQueryParam {
 
 @provide('UserDb')
 export default class UserDb {
-
-  @inject('logger')
-  private logger: Logger
 
   @inject('Mongodb')
   private mongodb: IMonkManager
@@ -185,11 +181,10 @@ export default class UserDb {
     }) param: IQueryParam) {
     const queryParam = pick(param, ['name', 'mobile', 'idCard', 'sex'])
     const userCollection = this.mongodb.get('user')
-    const squeryParam = Object.keys(queryParam).filter((key) => queryParam[key] !== '')
-    this.logger.info('mongo query param', Object.keys(squeryParam).map((key) => ({ [key]: squeryParam[key] })))
+    const keys = Object.keys(queryParam).filter((key) => queryParam[key] !== null)
     let result = []
-    if (Object.keys(squeryParam).length) {
-      result = await userCollection.find({ $and: Object.keys(squeryParam).map((key) => ({ [key]: squeryParam[key] })) })
+    if (keys.length) {
+      result = await userCollection.find({ $and: keys.map((key) => ({ [key]: queryParam[key] })) })
     } else {
       result = await userCollection.find({})
     }

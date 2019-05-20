@@ -6,7 +6,7 @@ import bibleContents from '../../config/bibleContents'
 import ReactAudio from '../../compontents/reactAudio'
 
 import './index.less'
-@connect('IBibleStore')
+@connect(['bibleStore'])
 export default class BibleDetail extends React.Component<any, any> {
 
   constructor (props) {
