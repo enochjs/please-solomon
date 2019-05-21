@@ -3,11 +3,6 @@ import * as md5 from 'md5'
 import { provide, inject } from '../inversifyKoa/ioc'
 import { Converter, Convert } from '../utils/decorators'
 
-export interface ImageParam {
-  name: string,
-  url: string,
-}
-
 @provide('AuthDb')
 export default class AuthDb {
 

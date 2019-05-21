@@ -19,7 +19,7 @@ export interface IUserListStore {
   deleteUser?: Function
 }
 
-export class UserListStore extends Store implements IUserListStore {
+export class UserListStore extends Store<any> implements IUserListStore {
 
   private initFormValue = () => ({
     name: '',

@@ -26,11 +26,13 @@ export interface IFormValue {
   introduce?: string
 }
 
-export interface IAddEditProps extends FormComponentProps, IUserListStore {
+interface IAddEditOwnProps {
   formValue: IFormValue
-  cacheInstance: (instance) => void,
+  cacheInstance: (instance) => any,
   query: Function
 }
+
+export interface IAddEditProps extends IAddEditOwnProps, FormComponentProps, IUserListStore {}
 
 @connect(['userListStore'])
 export class AddEdit extends React.Component<IAddEditProps, any> {
@@ -189,7 +191,9 @@ export class AddEdit extends React.Component<IAddEditProps, any> {
   }
 }
 
-export default Form.create({
+interface IFormProps extends IAddEditOwnProps, FormComponentProps {}
+
+export default (Form.create({
   onFieldsChange (props, changedFields) {
     // props.onChange(changedFields);
   },
@@ -202,7 +206,4 @@ export default Form.create({
     }
     return fields
   },
-  onValuesChange (_, values) {
-    console.log(values)
-  },
-})(AddEdit)
+})<any>(AddEdit)) as any

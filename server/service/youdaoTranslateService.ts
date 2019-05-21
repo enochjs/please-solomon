@@ -4,11 +4,6 @@ import { provide } from '../inversifyKoa/ioc'
 
 /** 收费，嫌弃 */
 
-export interface ImageParam {
-  name: string,
-  url: string,
-}
-
 @provide('YoudaoTranslateService')
 export default class YoudaoTranslateService {
 

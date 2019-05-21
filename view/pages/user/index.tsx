@@ -3,7 +3,7 @@ import { connect } from 'redux-zero-x'
 import { Button, Modal } from 'antd'
 import moment from 'moment'
 
-import SearchForm from '../../compontents/searchForm'
+import SearchForm from '../../compontents/form/searchForm'
 import Table from '../../compontents/table'
 import AddEditModal, { AddEdit } from './addEdit'
 import { getImgUrl } from '../../utils'
@@ -47,21 +47,24 @@ export default class PendingList extends React.Component<IProps, any> {
     getUserList({ name: '' })
   }
 
-  private getSearchList = () => [{
+  private getFormColumns = () => [{
     type: 'text',
-    key: 'name',
-    label: 'name',
+    id: 'name',
+    formItemLabel: 'name',
+    span: 6,
   }, {
     type: 'text',
-    key: 'mobile',
-    label: 'mobile',
+    id: 'mobile',
+    formItemLabel: 'mobile',
+    span: 6,
   }, {
     type: 'text',
-    key: 'idCard',
-    label: 'idCard',
+    id: 'idCard',
+    formItemLabel: 'idCard',
+    span: 6,
   }]
 
-  private cacheSearch = (item) => {
+  private cacheFormValue = (item) => {
     this.props.updateFormValue(item)
   }
 
@@ -163,9 +166,9 @@ export default class PendingList extends React.Component<IProps, any> {
     return (
       <div>
         <SearchForm
-          searchList={this.getSearchList()}
+          formColumns={this.getFormColumns()}
           formValue={this.props.formValue}
-          cacheSearch={this.cacheSearch}
+          cacheFormValue={this.cacheFormValue}
           clear={this.clear}
           onSubmit={this.query}
         />

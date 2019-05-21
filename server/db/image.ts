@@ -1,7 +1,7 @@
 import { IMonkManager, id } from 'monk'
 import { provide, inject } from '../inversifyKoa/ioc'
 
-export interface ImageParam {
+export interface IImageParam {
   name: string,
   url: string,
   size: number,
@@ -16,11 +16,11 @@ export default class ImageDb {
 
   /**
    * save image msg
-   * @param {ImageParam} param
+   * @param {IImageParam} param
    * @returns
    * @memberof ImageDb
    */
-  public async uploadImg (param: ImageParam) {
+  public async uploadImg (param: IImageParam) {
     const imgCollection = this.mongodb.get('image')
     const result = await imgCollection.insert({
       name: param.name,

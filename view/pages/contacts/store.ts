@@ -1,9 +1,9 @@
 import { Store, action } from 'redux-zero-x'
 import { fetchJSONByGet } from '../../utils/fetchApi'
 
-export class ContatcsStore extends Store {
+export class ContatcsStore extends Store<any> {
 
-state = {
+  state = {
     count: 1,
     data: '',
   }

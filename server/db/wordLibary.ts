@@ -7,13 +7,6 @@ import Config from '../config/index'
 
 const config = container.get<Config>('Config')
 
-export interface ImageParam {
-  name: string,
-  url: string,
-  size: number,
-  type: string,
-}
-
 @provide('WordLibaryDb')
 export default class WordLibaryDb {
 
