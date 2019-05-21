@@ -1,10 +1,10 @@
 import '../utils/middleware'
 import contatcsStore from '../pages/contacts/store'
-import pendingListStore from '../pages/user/pendingList/store'
+import userListStore from '../pages/user/store'
 import bibleStore from '../pages/bible/store'
 
 export default {
   contatcsStore,
-  pendingListStore,
+  userListStore,
   bibleStore,
 }

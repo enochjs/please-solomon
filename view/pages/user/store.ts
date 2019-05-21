@@ -1,6 +1,6 @@
 import { Store, action } from 'redux-zero-x'
 import { Moment } from 'moment'
-import { fetchJSONByGet, fetchJSONByPost, fetchJSONByPut, fetchJSONByDelete } from '../../../utils/fetchApi'
+import { fetchJSONByGet, fetchJSONByPost, fetchJSONByPut, fetchJSONByDelete } from '../../utils/fetchApi'
 
 export interface IFormValue {
   name?: string
@@ -10,16 +10,16 @@ export interface IFormValue {
   sex?: number
 }
 
-export interface IPendingListStore {
+export interface IUserListStore {
   updateFormValue?: Function
   resetFormValue?: Function
-  getPendingList?: Function
-  addPendingUser?: Function
-  updatePendingUser?: Function
-  deletePendingUser?: Function
+  getUserList?: Function
+  addUser?: Function
+  updateUser?: Function
+  deleteUser?: Function
 }
 
-export class PendingListStore extends Store implements IPendingListStore {
+export class UserListStore extends Store implements IUserListStore {
 
   private initFormValue = () => ({
     name: '',
@@ -49,25 +49,25 @@ export class PendingListStore extends Store implements IPendingListStore {
   }
 
   @action()
-  public async getPendingList (param) {
-    const data = await fetchJSONByGet('/api/user/pending/list', param)
+  public async getUserList (param) {
+    const data = await fetchJSONByGet('/api/user/list', param)
     return { data }
   }
 
   @action()
-  public async addPendingUser (param) {
-    return await fetchJSONByPost('/api/user/pending/add', param)
+  public async addUser (param) {
+    return await fetchJSONByPost('/api/user/add', param)
   }
 
   @action()
-  public async updatePendingUser (param) {
-    return await fetchJSONByPut('/api/user/pending/update', param)
+  public async updateUser (param) {
+    return await fetchJSONByPut('/api/user/update', param)
   }
 
   @action()
-  public async deletePendingUser (param) {
-    return await fetchJSONByDelete('/api/user/pending/delete/:_id', param)
+  public async deleteUser (param) {
+    return await fetchJSONByDelete('/api/user/delete/:_id', param)
   }
 }
 
-export default new PendingListStore()
+export default new UserListStore()

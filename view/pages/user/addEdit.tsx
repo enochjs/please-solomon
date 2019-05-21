@@ -2,11 +2,10 @@ import * as React from 'react'
 import { connect } from 'redux-zero-x'
 import { Modal, Form, Input, Radio, DatePicker } from 'antd'
 import { FormComponentProps } from 'antd/lib/form/Form'
-import { UploadChangeParam } from 'antd/lib/upload/interface'
 import { Moment } from 'moment'
-import { mobileReg, idCardReg } from '../../../utils/regExp'
-import UploadImg from '../../../compontents/uploadImg'
-import { IPendingListStore } from './store'
+import { mobileReg, idCardReg } from '../../utils/regExp'
+import UploadImg from '../../compontents/uploadImg'
+import { IUserListStore } from './store'
 
 import './index.less'
 
@@ -27,13 +26,13 @@ export interface IFormValue {
   introduce?: string
 }
 
-export interface IAddEditProps extends FormComponentProps, IPendingListStore {
+export interface IAddEditProps extends FormComponentProps, IUserListStore {
   formValue: IFormValue
   cacheInstance: (instance) => void,
   query: Function
 }
 
-@connect('PendingList')
+@connect(['userListStore'])
 export class AddEdit extends React.Component<IAddEditProps, any> {
 
   constructor (props: IAddEditProps) {
@@ -59,11 +58,11 @@ export class AddEdit extends React.Component<IAddEditProps, any> {
   }
 
   handleOk = () => {
-    const { addPendingUser, form, updatePendingUser, formValue, query } = this.props
+    const { addUser, form, updateUser, formValue, query } = this.props
     form.validateFieldsAndScroll((err: Error, values: IFormValue) => {
       if (!err) {
         if (formValue._id) {
-          updatePendingUser({
+          updateUser({
             ...values,
             _id: formValue._id,
             birthday: values.birthday.format('YYYY-MM-DD HH:mm:ss'),
@@ -73,7 +72,7 @@ export class AddEdit extends React.Component<IAddEditProps, any> {
             query()
           })
         } else {
-          addPendingUser({
+          addUser({
             ...values,
             birthday: values.birthday.format('YYYY-MM-DD HH:mm:ss'),
             images: this.uploadImg.getImageList(),

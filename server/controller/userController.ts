@@ -13,16 +13,16 @@ export default class UserController {
   @inject('UserDb')
   private userDb: UserDb
 
-  @Get('api/user/pending/list')
+  @Get('api/user/list')
   @ResponseBody
-  public async getPendingList (
+  public async getUserList (
     @QueryParam('name') name: string,
     @QueryParam('mobile') mobile: number,
     @QueryParam('idCard') idCard: string,
     @QueryParam('sex') sex: number,
   ) {
     const userList = await this.userDb.getUserList({ name, mobile, idCard, sex})
-    this.logger.info(`Get api/user/pending/list name = ${typeof userList}`)
+    this.logger.info(`Get api/user/list name = ${typeof userList}`)
     return {
       list: userList,
       currentPage: 1,
@@ -46,9 +46,9 @@ export default class UserController {
 	 * @returns
 	 * @memberof UserController
 	 */
-  @Post('api/user/pending/add')
+  @Post('api/user/add')
   @ResponseBody
-  public async userPendingAdd (
+  public async useAdd (
     @RequestBody('name') name: string,
     @RequestBody('mobile') mobile: number,
     @RequestBody('birthday') birthday: string,
@@ -89,9 +89,9 @@ export default class UserController {
    * @returns
    * @memberof UserController
    */
-  @Put('api/user/pending/update')
+  @Put('api/user/update')
   @ResponseBody
-  public async userPendingUpdate (
+  public async useUpdate (
     @RequestBody('_id') _id: string,
     @RequestBody('name') name: string,
     @RequestBody('mobile') mobile: number,
@@ -119,9 +119,9 @@ export default class UserController {
     return result
   }
 
-  @Delete('api/user/pending/delete/:_id')
+  @Delete('api/user/delete/:_id')
   @ResponseBody
-  public async userPendingDelete (
+  public async useDelete (
     @RequestParam('_id') _id: string,
   ) {
     const result = await this.userDb.delUserList(_id)

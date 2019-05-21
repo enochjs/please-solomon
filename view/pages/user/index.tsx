@@ -3,23 +3,23 @@ import { connect } from 'redux-zero-x'
 import { Button, Modal } from 'antd'
 import moment from 'moment'
 
-import SearchForm from '../../../compontents/searchForm'
-import Table from '../../../compontents/table'
+import SearchForm from '../../compontents/searchForm'
+import Table from '../../compontents/table'
 import AddEditModal, { AddEdit } from './addEdit'
-import { getImgUrl } from '../../../utils'
+import { getImgUrl } from '../../utils'
 
-import { PendingListStore } from './store'
-import { Pagination } from '../../../types/index'
+import { UserListStore } from './store'
+import { Pagination } from '../../types/index'
 
 const ButtonGroup = Button.Group
 const confirm = Modal.confirm
 
-export interface IProps extends PendingListStore {
+export interface IProps extends UserListStore {
   data: Pagination
   formValue: any
 }
 
-@connect(['pendingListStore'])
+@connect(['userListStore'])
 export default class PendingList extends React.Component<IProps, any> {
 
   constructor (props: IProps) {
@@ -43,8 +43,8 @@ export default class PendingList extends React.Component<IProps, any> {
   addEdit: AddEdit
 
   componentWillMount () {
-    const { getPendingList } = this.props
-    getPendingList({ name: '' })
+    const { getUserList } = this.props
+    getUserList({ name: '' })
   }
 
   private getSearchList = () => [{
@@ -70,17 +70,17 @@ export default class PendingList extends React.Component<IProps, any> {
   }
 
   public query = () => {
-    const { getPendingList, formValue } = this.props
-    getPendingList(formValue)
+    const { getUserList, formValue } = this.props
+    getUserList(formValue)
   }
 
   handleDelete = (record: any) => {
-    const { deletePendingUser } = this.props
+    const { deleteUser } = this.props
     confirm({
       title: '删除?',
       content: '确定删除？',
       onOk: () => {
-        deletePendingUser({ _id: record._id }).then(() => {
+        deleteUser({ _id: record._id }).then(() => {
           this.query()
         })
       },
